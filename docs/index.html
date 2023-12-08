@@ -7,3 +7,15 @@ title: Home
 <p>
   new website preview.
 </p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"/>
+<script>
+  Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vSh-lqiNoQc5XgSQB7zFSpnu8iNvATakGWAuhDgYRIe_mvP03BNJkg83tshb6lnQUjTC2U6zygqagnS/pub?gid=0&single=true&output=csv", {
+    worker: true,
+    download: true,
+    complete: function(results) {
+      console.log(results);
+
+    }
+  });
+</script>
