@@ -1,7 +1,3 @@
----
-layout: default
-title: Home
----
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
@@ -281,15 +277,4 @@ title: Home
 
 
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"/>
-  <script>
-    let sheet_id = "1FVeKiUz4qCzx-74VZmq4v-WcQMFy7szzcgS4ORv_5Z8"
-    Papa.parse(`https://docs.google.com/spreadsheets/d/e/${sheet_id}/pub?gid=0&single=true&output=csv", {
-      worker: true,
-      download: true,
-      complete: function(results) {
-        console.log(results);
-      }
-    });
-  </script>
 </html>
