@@ -4,3 +4,12 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+
+repository: Eddington-Residents-Association/website
+
+plugins:
+- jekyll-github-metadata
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-sitemap
+- jemoji

@@ -1,0 +1,135 @@
+---
+title: Events in Eddington
+permalink: events
+---
+
+<div id="events_html">
+  <i>Loading events...</i>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script>
+//var sheetId = '1FVeKiUz4qCzx-74VZmq4v-WcQMFy7szzcgS4ORv_5Z8';
+var sheetId = '2PACX-1vSh-lqiNoQc5XgSQB7zFSpnu8iNvATakGWAuhDgYRIe_mvP03BNJkg83tshb6lnQUjTC2U6zygqagnS';
+var is_papa_complete = false
+Papa.parse(`https://docs.google.com/spreadsheets/d/e/${sheetId}/pub?gid=0&single=true&output=csv`, {
+  worker: true,
+  download: true,
+  header: false,
+  complete: function(results) {
+    if(is_papa_complete){return;}
+    is_papa_complete = true
+    console.log("papa done")
+    console.log(results)
+    html = makeNewsletterHtmlForMonth(results.data);
+    document.getElementById("events_html").innerHTML = html
+  }
+});
+
+const DATE_APPROVED = 0;
+const DATE_SUBMITTED = 1;
+const NAME = 2;
+const DATE = 3;
+const START_TIME = 4;
+const END_TIME = 5;
+const LOCATION = 6;
+const URL = 7;
+const NEEDS_SIGNUP = 8;
+const PRICE = 9;
+const DESCRIPTION = 10;
+
+
+function makeNewsletterHtmlForMonth(sheet_data){
+  var now = new Date();
+  var month_start = new Date(now.getFullYear(), now.getMonth() - 2, 1);
+  var month_end = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+  console.log(`looking for events between ${month_start} and ${month_end}`);
+  var all_events = sheet_data.slice(1)
+  for(i in all_events){
+    for(field of [DATE_SUBMITTED, DATE_APPROVED, DATE]){
+      all_events[i][field] = parseDate(all_events[i][field])
+    }
+    for(field of [START_TIME, END_TIME]){
+      all_events[i][field] = new Date(2000, 1, 1, ...all_events[i][field].split(":"))
+    }
+  }
+  console.log(all_events)
+  var month_events = all_events.filter((x)=>x[DATE_APPROVED] && x[DATE_APPROVED] > x[DATE_SUBMITTED] && x[DATE] >= month_start && x[DATE] < month_end);
+
+  console.log(`${month_events.length} events found for ${month_start.toLocaleString('default', { month: 'long' })}`);
+
+  var html = `<table id="events_table">\n  <tbody>`
+  var features = ""
+  var prev_date = month_end;
+  for(var date = month_start; date < month_end; date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1)){
+    if(prev_date.getMonth() != date.getMonth()){
+      html += `<tr class="month"><td colspan=2>${date.toLocaleString('default', { month: 'long' }).toUpperCase()}</td></tr>\n`;
+    }
+    var weekend_class = [0, 6].includes(date.getDay()) ? "weekend" : "";
+    var date_str = date.toLocaleString('default', {weekday: "short"}) + " " + date.toLocaleString('default', {day: "numeric"});
+    var next_date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+    var day_events = month_events.filter((x)=>x[DATE] >= date && x[DATE] < next_date)
+    day_events.sort((x, y) => x[START_TIME].getTime() - y[START_TIME].getTime());
+
+    time_range = (x) => short_time(x[START_TIME], x[END_TIME]) + "-" + short_time(x[END_TIME]);
+    signup_icon = (x) => x[NEEDS_SIGNUP] == "Yes" ? `<a class="signup-required" title="requires signup before you attend" href="${x[URL]}">🖉</a>` : ""
+
+    for(event of day_events){
+      let d = event[DATE]
+      let dateline = `${d.toLocaleString('default', {weekday: "short"})} ${d.toLocaleString('default', {day: "numeric", })}${date_th(d)} ${d.toLocaleString('default', {month: "short" })} ${time_range(event)} @&nbsp;${event[LOCATION]}`
+      let link_text = event[NEEDS_SIGNUP] == "Yes" ? "sign up" : "see details"
+      let link = event[URL].trim() ? `\n<a href="${event[URL]}">${link_text}</a>` : ""
+      features += `<div class="headline-event">\n<div>${dateline}</div>\n<h1>${event[NAME]}</h1>\n<div>${event[DESCRIPTION]}${link}</div>\n</div>\n\n\n`
+    }
+
+    var events_html = day_events.map(
+      (x)=>`<span class="event" title="${x[DESCRIPTION].trim()}">\n`
+          +`        ${time_range(x)}\n`
+          +`        <a href="${x[URL]}">${x[NAME]}</a>\n`
+          +`        ${x[LOCATION]}\n`
+          +`        ${signup_icon(x)}\n`
+          +`        <i>🛈</i>\n`
+          +`      </span>\n\n`
+      ).join("\n")
+    html += `<tr class="day ${weekend_class}">
+    <td class="date">${date_str}</td>
+    <td class="events">
+      ${events_html}
+    </td>
+</tr>\n`
+
+    prev_date = date;
+  }
+  html += `  </tbody>\n</table>`
+  console.log(html);
+  console.log(features);
+  return features + html
+}
+
+function parseDate(d){
+  // converts date strings "15/05/2024 00:00:00" to "2024-05-15 00:00:00" which js Date can parse
+  if(!d){return}
+  return new Date(d.split(" ").map((x)=>x.split("/").toReversed().join("-")).join(" "))
+}
+
+function short_time(d, d2){
+  var r = d.getHours() % 12;
+  if(d.getMinutes() != 0){
+    r += "." + d.toLocaleString('default', {minute: "2-digit"})
+  }
+  am_pm = get_am_pm(d)
+  if(!d2 || get_am_pm(d2) != am_pm){ r += am_pm }
+  return r;
+}
+
+function get_am_pm(d){
+  return d.getHours() < 12 ? "am" : "pm";
+}
+
+function date_th(d){
+  day = d.getDate()
+  return (day >= 4 &&  day <= 20) || (day >= 24 && day <= 30)
+    ? "th"
+    : ["st", "nd", "rd"][day % 10 - 1];
+}
+</script>
