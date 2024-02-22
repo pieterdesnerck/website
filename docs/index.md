@@ -30,3 +30,14 @@ We aim, as far as possible and where appropriate for a residents' association, t
 * To work in partnership with the council and other agencies to achieve our aims.
 * To represent the interests of residents in consultation with the local authority and other bodies.
 * The Association shall be non-party political and non-sectarian.
+
+## Committee
+
+Our committee is formed of volunteer local residents who meet each month.
+
+### Current committee members:
+{% include committee_images.html filter="current" %}
+
+
+### Past committee members:
+{% include committee_images.html filter="-2" %}

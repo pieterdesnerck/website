@@ -1,0 +1,16 @@
+<div class="committee-images">
+{% for image in site.static_files %}
+  {% if image.path contains 'images/committee' and image.path contains '.jpg' and image.path contains include.filter|default:'.' %}
+    {% assign details = image.path | split: '/' | last | split: '.' | first | split: ' - ' %}
+    <div>
+      <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+      <br/>
+      {{ details[1] }}
+      <br/>
+      {{ details[2] }}
+      <br/>
+      {{ details[0] }}
+    </div>
+  {% endif %}
+{% endfor %}
+</div>
