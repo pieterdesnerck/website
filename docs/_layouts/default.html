@@ -88,13 +88,40 @@
     :root {
       --menu-dim: 41px;
     }
+
+    {% assign random_background = site.static_files | where_exp: "x", "x.path contains 'backgrounds/'" | sample %}
     #bg {
       position: fixed;
       width: 100vw;
       height: 100vh;
-      background-image: url('images/eddington-drone-north.jpg');
+      background-image: url('{{ site.baseurl }}{{ random_background.path }}');
       background-size: cover;
-      background-repeat: none
+      background-repeat: no-repeat;
+    }
+    #bg-attribution {
+      position: fixed;
+      display: block;
+      bottom: 0;
+      left: calc(100vw - 2em);
+      padding: 0.2em 1em 0.2em 3em;
+      color: white;
+      background-color: #4caad8;
+      z-index: 3;
+      height: 2em;
+      overflow: hidden;
+    }
+    #bg-attribution:hover {
+      left: auto;
+      right: 0;
+    }
+    #bg-attribution:before {
+      content: "📷";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2em;
+      height: 2em;
+      text-align: center;
     }
     nav {
       position: fixed;
@@ -175,25 +202,25 @@
   </head>
   <body>
     <div id="bg"></div>
+    <div id="bg-attribution">{{ random_background.basename }}</div>
     <nav>
       <a href="/events">events</a>
       <a href="/representation">representation</a>
       <a href="/area-guide">area guide</a>
     </nav>
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-  <main class="">
-    <a class="logo" href="/"><img src="images/logo.svg" /></a>
-    <h1>{{ page.title }}</h1>
-    {{ content }}
-    <br>
-    <br>
-    <br>
-    <p>This site is open source. <a href="{{ site.github.repository_url }}/tree/main/docs/{{ page.path }}">Contribute to this page</a>.</p>
-  </main>
+      <main class="">
+        <a class="logo" href="/"><img src="images/logo.svg" /></a>
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+        <br>
+        <br>
+        <br>
+        <p>This site is open source. <a href="{{ site.github.repository_url }}/tree/main/docs/{{ page.path }}">Contribute to this page</a>.</p>
+      </main>
 
-</div>
-
+    </div>
 
 
   </body>
