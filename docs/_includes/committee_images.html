@@ -1,5 +1,5 @@
 <div class="committee-images">
-{% for image in site.static_files %}
+{% for image in site.static_files reversed %}
   {% if image.path contains "images/committee" and image.extname == ".jpg" and image.name contains include.filter|default:"." %}
     {% assign details = image.basename | split: " - " %}
     <div>
