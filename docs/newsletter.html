@@ -1,0 +1,625 @@
+---
+title: Newsletter Content Generation
+permalink: newsletter
+---
+
+<p>
+This page help generate the html needed for the monthly newsletter.
+</p>
+
+<div id="events_html">
+  <i class="loading">Loading events....</i>
+  events table rows:<br>
+  <textarea class="raw"></textarea>
+</div>
+
+{% include main_js.html %}
+<script>
+window.addEventListener("load", (event) => {
+  getEventsData(function(data){
+    let $events_div = document.getElementById("events_html")
+    let event_table_rows = makeNewsletterHtmlForMonth(data);
+    $events_div.getElementsByClassName("loading")[0].classList.add("d-none")
+    $events_div.getElementsByClassName("raw")[0].innerHTML = event_table_rows
+    document.getElementById("event_table_content").innerHTML = event_table_rows
+  });
+})
+</script>
+
+
+<p>
+Here's a preview of how that looks in an old email design. Note that the css is inlined by MailChimp
+specifics of the layout and style may be misleading.
+</p>
+
+
+<style>
+.headline-event > * {
+	text-align: justify;
+}
+.headline-event > div > a {
+	float: right;
+    color: #404040!important;
+    text-decoration-color:#fff5!important;
+    font-weight: bold!important;
+
+
+}
+.headline-event > div > a:hover {
+	color: #202020!important;
+    text-decoration-color:#fffc!important;
+}
+
+#events_table {
+	text-align: left;
+    font-size: 14px;
+    width: 100%;
+    max-width: 400px;
+}
+#events_table tr.day td, tr.month td {
+	padding: 0.5em;
+}
+#events_table td.date {
+    text-align: right;
+    width: 20%;
+    vertical-align: top;
+}
+
+#events_table tr.weekend {
+	background-color: #eee;
+}
+#events_table tr.day a, .blue-links a {
+	color: #4caad8!important;
+}
+
+#events_table .date {
+  white-space: nowrap;
+
+}
+
+#events_table .event {
+	display: inline-block;
+  padding: 0 0 0.5em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#events_table .event i {
+	font-style: normal;
+	opacity: 0.2;
+    vertical-align: middle;
+    cursor: pointer;
+}
+#events_table .signup-required {
+	text-decoration: none;
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+#events_table .event i:hover,
+#events_table .signup-required:hover {
+	opacity: 1;
+}
+</style>
+
+<div class=""><div class="aHl"></div><div id=":3yt" tabindex="-1"></div><div id=":3vq" class="ii gt" jslog="20277; u014N:xr6bB; 1:WyIjdGhyZWFkLWY6MTc4OTgyMDMyNTc5MTgyNjc5MSJd; 4:WyIjbXNnLWY6MTc4OTgyMDMyNTc5MTgyNjc5MSJd"><div id=":3vr" class="a3s aiL msg3256695243349130111"><u></u>
+    <div marginwidth="0" marginheight="0" style="height:100%;margin:0;padding:0;width:100%;background-color:#ffffff">
+
+        <span class="m_3256695243349130111mcnPreviewText" style="display:none;font-size:0px;line-height:0px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">See what's on next month for the neighbourhood</span>
+
+        <center>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="m_3256695243349130111bodyTable" style="border-collapse:collapse;height:100%;margin:0;padding:0;width:100%;background-color:#ffffff">
+                <tbody><tr>
+                    <td align="center" valign="top" id="m_3256695243349130111bodyCell" style="height:100%;margin:0;padding:0;width:100%;border-top:0">
+
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+                            <tbody><tr>
+                                <td align="center" valign="top">
+
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="m_3256695243349130111templatePreheader" style="border-collapse:collapse;background-color:#ffffff;border-top:0;border-bottom:0">
+                                        <tbody><tr>
+                                        	<td align="center" valign="top">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="m_3256695243349130111templateContainer" style="border-collapse:collapse">
+                                                    <tbody><tr>
+                                                        <td valign="top" class="m_3256695243349130111preheaderContainer" style="padding-top:10px;padding-bottom:10px"></td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="m_3256695243349130111templateHeader" style="border-collapse:collapse;background-color:#ffffff;border-top:0;border-bottom:0">
+                                        <tbody><tr>
+                                            <td align="center" valign="top">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="m_3256695243349130111templateContainer" style="border-collapse:collapse">
+                                                    <tbody><tr>
+                                                        <td valign="top" class="m_3256695243349130111headerContainer" style="padding-top:10px;padding-bottom:10px"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+    <tbody>
+        <tr>
+            <td valign="top">
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse">
+    <tbody>
+            <tr>
+                <td valign="top" style="padding:9px">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" style="min-width:100%;border-collapse:collapse">
+                        <tbody><tr>
+                            <td valign="top" style="padding-right:9px;padding-left:9px;padding-top:0;padding-bottom:0;text-align:center">
+
+                                    <a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=4fedb90a49&amp;e=2aaf2f49e5" title="" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3D4fedb90a49%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038625000&amp;usg=AOvVaw2OS_DqR0nvkeT__SZSu-oz">
+                                        <img align="center" alt="" src="https://ci3.googleusercontent.com/meips/ADKq_NbVndsH4Z1ovAGYUSddmXH-9IIggIC5nwds9FfNMM1xheYTVV14dnjnq6YLF6cLpCXTxDaqmNrPscO1RSk1pS4ePpOmPBLQTmR916X7_ZpVe2vHgLUP2MI2Efx8gOwojkscJSnua1KATx8IKKrLF0O9zqXHyTyLDy8=s0-d-e1-ft#https://mcusercontent.com/77028e27d8594eefd09bbb473/images/ac9304ab-eb02-64df-f2ff-c1c06fa41c28.jpg" width="564" style="max-width:1461px;padding-bottom:0;display:inline!important;vertical-align:bottom;border:0;height:auto;outline:none;text-decoration:none" class="m_3256695243349130111mcnImage CToWUd" data-bit="iit">
+                                    </a>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse">
+    <tbody>
+        <tr>
+            <td valign="top" style="padding-top:9px">
+
+
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%;min-width:100%;border-collapse:collapse" width="100%" class="m_3256695243349130111mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="m_3256695243349130111mcnTextContent" style="padding:0px 18px 9px;color:#666666;font-style:normal;font-weight:normal;word-break:break-word;font-family:Helvetica;font-size:16px;line-height:150%;text-align:center">
+
+                            <div style="text-align:center"><br>
+<em>February sees stargazing; chances to read and write; and our regular quiz and boardgame evenings. Also opportunities to talk face-to-face with Portal,&nbsp;the University and&nbsp;Council about the current and future state of our neighbourhood.</em></div>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="m_3256695243349130111templateBody" style="border-collapse:collapse;background-color:#ffffff;border-top:0;border-bottom:0">
+                                        <tbody><tr>
+                                            <td align="center" valign="top">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="m_3256695243349130111templateContainer" style="border-collapse:collapse">
+                                                    <tbody><tr>
+                                                        <td valign="top" class="m_3256695243349130111bodyContainer" style="padding-top:10px;padding-bottom:10px"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+    <tbody>
+        <tr>
+            <td valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px">
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#4caad8;border-collapse:collapse">
+    <tbody><tr>
+        <td class="m_3256695243349130111mcnImageCardBottomImageContent" align="center" valign="top" style="padding-top:0px;padding-right:0px;padding-bottom:0;padding-left:0px">
+
+
+
+            <img alt="" src="https://ci3.googleusercontent.com/meips/ADKq_NZnaVQZQsmdX9FBBUHrYqsYHZlRMvldLaacn00lUBtE0MX2jjbjIn_LH5BjI-qJspShCSvZnL2IP9cSoBtR01HFST1zO9KHbPWzKxUwyZwZI3HE7Ih2xsUStFwRwwYjZ-fpLT_lYJG-88gkQZlGaKb8he1REZGP_h4=s0-d-e1-ft#https://mcusercontent.com/77028e27d8594eefd09bbb473/images/8470ca3d-8c50-7f96-a1b0-df59efac0ce1.png" width="564" style="max-width:905px;border:1px none;border-radius:0%;height:auto;outline:none;text-decoration:none;vertical-align:bottom" class="m_3256695243349130111mcnImage CToWUd a6T" data-bit="iit" tabindex="0"><div class="a6S" dir="ltr" style="opacity: 0.01; left: 768.025px; top: 499.95px;"><span data-is-tooltip-wrapper="true" class="a5q" jsaction="JIbuQc:.CLIENT"><button class="VYBDae-JX-I VYBDae-JX-I-ql-ay5-ays CgzRE" jscontroller="PIVayb" jsaction="click:h5M12e;clickmod:h5M12e; pointerdown:FEiYhc; pointerup:mF5Elf; pointerenter:EX0mI; pointerleave:vpvbp; pointercancel:xyn4sd; contextmenu:xexox;focus:h06R8; blur:zjh6rb;mlnRJb:fLiPzd;" data-idom-class="CgzRE" jsname="hRZeKc" aria-label="Download attachment " data-tooltip-enabled="true" data-tooltip-id="tt-c3850" data-tooltip-classes="AZPksf" id="" jslog="91252; u014N:cOuCgd,Kr2w4b,xr6bB; 4:WyIjbXNnLWY6MTc4OTgyMDMyNTc5MTgyNjc5MSJd; 43:WyJpbWFnZS9qcGVnIl0."><span class="OiePBf-zPjgPe VYBDae-JX-UHGRz"></span><span class="bHC-Q" data-unbounded="false" jscontroller="LBaJxb" jsname="m9ZlFb" soy-skip="" ssk="6:RWVI5c"></span><span class="VYBDae-JX-ank-Rtc0Jf" jsname="S5tZuc" aria-hidden="true"><span class="bzc-ank" aria-hidden="true"><svg height="20" viewBox="0 -960 960 960" width="20" focusable="false" class=" aoH"><path d="M480-336 288-528l51-51 105 105v-342h72v342l105-105 51 51-192 192ZM263.717-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.162 50.85Q725.676-192 695.96-192H263.717Z"></path></svg></span></span><div class="VYBDae-JX-ano"></div></button><div class="ne2Ple-oshW8e-J9" id="tt-c3850" role="tooltip" aria-hidden="true">Download</div></span></div>
+
+
+        </td>
+    </tr>
+    <tr>
+        <td class="m_3256695243349130111mcnTextContent" valign="top" style="padding:9px 18px;color:#ffffff;font-size:16px;font-weight:bold;text-align:center;word-break:break-word;font-family:Helvetica;line-height:150%" width="546">
+            <div>
+<div style="text-align:justify">Sat 17th Feb 6.30-7.30pm @&nbsp;behind Storeys Field Centre</div>
+<h1 style="display:block;margin:0;padding:0;font-family:Helvetica;font-size:40px;font-style:normal;font-weight:bold;line-height:100%;letter-spacing:-1px;text-align:justify;color:#ffffff!important">Eddington Astronomy</h1>
+<div style="text-align:justify">We will be setting up our telescope and binoculars by the Eddington Cricket Pitch this month so that residents can see the Orion Nebula up close. Jupiter is still in the evening sky, so you can try and spot its 4 largest moons using our equipment. And we'll be giving a short tour of the sky to visitors, including a bit about the battle scene that is enacted by the constellations in the south sky.
+<a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=2b5d60fe9e&amp;e=2aaf2f49e5" style="float:right;color:#404040!important;font-weight:bold!important;text-decoration:underline;text-decoration-color:#fff5!important" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3D2b5d60fe9e%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038626000&amp;usg=AOvVaw1gdWiADU-ccN1hAIY3CnTH">see details</a></div>
+</div>
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="m_3256695243349130111templateColumns" style="border-collapse:collapse;background-color:#ffffff;border-top:0;border-bottom:0">
+                                        <tbody><tr>
+                                            <td align="center" valign="top" style="padding-top:10px;padding-bottom:10px">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="m_3256695243349130111templateContainer" style="border-collapse:collapse">
+                                                    <tbody><tr>
+                                                        <td align="left" valign="top" class="m_3256695243349130111columnsContainer" width="50%">
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+                                                                <tbody><tr>
+                                                                    <td valign="top" class="m_3256695243349130111leftColumnContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+    <tbody>
+        <tr>
+            <td valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px">
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#4caad8;border-collapse:collapse">
+    <tbody><tr>
+        <td class="m_3256695243349130111mcnImageCardBottomImageContent" align="center" valign="top" style="padding-top:0px;padding-right:0px;padding-bottom:0;padding-left:0px">
+
+
+
+            <img alt="" src="https://ci3.googleusercontent.com/meips/ADKq_NYphzCVZwCaVDKRcd9eEzaAht_wRXooXz1AU_rREhy-nJrEob7eGRIZduufoKhYw1xJb5mS8EUVa1th8C_EF5gLlykGveWruqgIvpf9LyDjSPwZJxNOR9xFZxYjSTfOKbdwyoGIjuLZebf3EPkO_WJ8ArHjtioYQXI=s0-d-e1-ft#https://mcusercontent.com/77028e27d8594eefd09bbb473/images/60dec680-3d3f-1f2d-3b93-41f5a7c37fe6.png" width="264" style="max-width:505px;border:1px none;border-radius:0%;height:auto;outline:none;text-decoration:none;vertical-align:bottom" class="m_3256695243349130111mcnImage CToWUd a6T" data-bit="iit" tabindex="0"><div class="a6S" dir="ltr" style="opacity: 0.01; left: 468.025px; top: 1022.66px;"><span data-is-tooltip-wrapper="true" class="a5q" jsaction="JIbuQc:.CLIENT"><button class="VYBDae-JX-I VYBDae-JX-I-ql-ay5-ays CgzRE" jscontroller="PIVayb" jsaction="click:h5M12e;clickmod:h5M12e; pointerdown:FEiYhc; pointerup:mF5Elf; pointerenter:EX0mI; pointerleave:vpvbp; pointercancel:xyn4sd; contextmenu:xexox;focus:h06R8; blur:zjh6rb;mlnRJb:fLiPzd;" data-idom-class="CgzRE" jsname="hRZeKc" aria-label="Download attachment " data-tooltip-enabled="true" data-tooltip-id="tt-c3849" data-tooltip-classes="AZPksf" id="" jslog="91252; u014N:cOuCgd,Kr2w4b,xr6bB; 4:WyIjbXNnLWY6MTc4OTgyMDMyNTc5MTgyNjc5MSJd; 43:WyJpbWFnZS9qcGVnIl0."><span class="OiePBf-zPjgPe VYBDae-JX-UHGRz"></span><span class="bHC-Q" data-unbounded="false" jscontroller="LBaJxb" jsname="m9ZlFb" soy-skip="" ssk="6:RWVI5c"></span><span class="VYBDae-JX-ank-Rtc0Jf" jsname="S5tZuc" aria-hidden="true"><span class="bzc-ank" aria-hidden="true"><svg height="20" viewBox="0 -960 960 960" width="20" focusable="false" class=" aoH"><path d="M480-336 288-528l51-51 105 105v-342h72v342l105-105 51 51-192 192ZM263.717-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.162 50.85Q725.676-192 695.96-192H263.717Z"></path></svg></span></span><div class="VYBDae-JX-ano"></div></button><div class="ne2Ple-oshW8e-J9" id="tt-c3849" role="tooltip" aria-hidden="true">Download</div></span></div>
+
+
+        </td>
+    </tr>
+    <tr>
+        <td class="m_3256695243349130111mcnTextContent" valign="top" style="padding:9px 18px;color:#ffffff;font-size:16px;font-weight:bold;text-align:center;word-break:break-word;font-family:Helvetica;line-height:150%" width="246">
+            <div>
+<div style="text-align:justify">Tue 13th Feb 6-7pm @&nbsp;<a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=d8af4c8cc0&amp;e=2aaf2f49e5" style="float:right;color:#404040!important;font-weight:bold!important;text-decoration:underline;text-decoration-color:#fff5!important" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3Dd8af4c8cc0%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038626000&amp;usg=AOvVaw2zy9AyVBKEVQDQVyWu8tWl">Online</a></div>
+
+<h1 style="display:block;margin:0;padding:0;font-family:Helvetica;font-size:40px;font-style:normal;font-weight:bold;line-height:100%;letter-spacing:-1px;text-align:justify;color:#ffffff!important">North West and West Cambridge <span class="il">Community</span> Forum</h1>
+
+<div style="text-align:justify">This forum brings residents, councils and developers together to raise issues and discuss how <span class="il">local</span> developments are progressing. If you want to learn about and influence the direction of Eddington this is the place to be.&nbsp;<a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=4d6f5064f2&amp;e=2aaf2f49e5" style="float:right;color:#404040!important;font-weight:bold!important;text-decoration:underline;text-decoration-color:#fff5!important" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3D4d6f5064f2%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038626000&amp;usg=AOvVaw3waI6E-UYoSeFGo9DIP5N2">see details</a>&nbsp;<br>
+<a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=52f2e15d65&amp;e=2aaf2f49e5" style="float:right;color:#404040!important;font-weight:bold!important;text-decoration:underline;text-decoration-color:#fff5!important" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3D52f2e15d65%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038626000&amp;usg=AOvVaw1gHp22IH0tStfl49asull4">online meeting link</a></div>
+</div>
+
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                                                </tr>
+                                                            </tbody></table>
+                                                        </td>
+                                                        <td align="left" valign="top" class="m_3256695243349130111columnsContainer" width="50%">
+                                                            <table align="right" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+                                                                <tbody><tr>
+                                                                    <td valign="top" class="m_3256695243349130111rightColumnContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+    <tbody>
+        <tr>
+            <td valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px">
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#4caad8;border-collapse:collapse">
+    <tbody><tr>
+        <td class="m_3256695243349130111mcnImageCardBottomImageContent" align="center" valign="top" style="padding-top:0px;padding-right:0px;padding-bottom:0;padding-left:0px">
+
+
+
+            <img alt="" src="https://ci3.googleusercontent.com/meips/ADKq_NYbjfrPwcuuWhV_BBzdy-UBtQ_dodN1_8Sa06yR6kwZ3CWru2BJOYuARBkSwJzLRumm7mnNI_THh9ovZK2U34lIMxyMA-2vn-uS3h9CY6uglPmWcXSaflCR79CeJ4poUzDUxl0fbyAjdWmyEaaZ59xnUmRAmwXR544=s0-d-e1-ft#https://mcusercontent.com/77028e27d8594eefd09bbb473/images/bc9b2f0a-7247-0ebd-6681-ee48218866e6.png" width="264" style="max-width:800px;border:1px none;border-radius:0%;height:auto;outline:none;text-decoration:none;vertical-align:bottom" class="m_3256695243349130111mcnImage CToWUd a6T" data-bit="iit" tabindex="0"><div class="a6S" dir="ltr" style="opacity: 0.01; left: 768.025px; top: 978.663px;"><span data-is-tooltip-wrapper="true" class="a5q" jsaction="JIbuQc:.CLIENT"><button class="VYBDae-JX-I VYBDae-JX-I-ql-ay5-ays CgzRE" jscontroller="PIVayb" jsaction="click:h5M12e;clickmod:h5M12e; pointerdown:FEiYhc; pointerup:mF5Elf; pointerenter:EX0mI; pointerleave:vpvbp; pointercancel:xyn4sd; contextmenu:xexox;focus:h06R8; blur:zjh6rb;mlnRJb:fLiPzd;" data-idom-class="CgzRE" jsname="hRZeKc" aria-label="Download attachment " data-tooltip-enabled="true" data-tooltip-id="tt-c3851" data-tooltip-classes="AZPksf" id="" jslog="91252; u014N:cOuCgd,Kr2w4b,xr6bB; 4:WyIjbXNnLWY6MTc4OTgyMDMyNTc5MTgyNjc5MSJd; 43:WyJpbWFnZS9qcGVnIl0."><span class="OiePBf-zPjgPe VYBDae-JX-UHGRz"></span><span class="bHC-Q" data-unbounded="false" jscontroller="LBaJxb" jsname="m9ZlFb" soy-skip="" ssk="6:RWVI5c"></span><span class="VYBDae-JX-ank-Rtc0Jf" jsname="S5tZuc" aria-hidden="true"><span class="bzc-ank" aria-hidden="true"><svg height="20" viewBox="0 -960 960 960" width="20" focusable="false" class=" aoH"><path d="M480-336 288-528l51-51 105 105v-342h72v342l105-105 51 51-192 192ZM263.717-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.162 50.85Q725.676-192 695.96-192H263.717Z"></path></svg></span></span><div class="VYBDae-JX-ano"></div></button><div class="ne2Ple-oshW8e-J9" id="tt-c3851" role="tooltip" aria-hidden="true">Download</div></span></div>
+
+
+        </td>
+    </tr>
+    <tr>
+        <td class="m_3256695243349130111mcnTextContent" valign="top" style="padding:9px 18px;color:#ffffff;font-size:16px;font-weight:bold;text-align:center;word-break:break-word;font-family:Helvetica;line-height:150%" width="246">
+            <div>
+<div style="text-align:justify">Sat 17&nbsp;Feb 8-10pm @ Douce</div>
+
+<h1 style="display:block;margin:0;padding:0;font-family:Helvetica;font-size:40px;font-style:normal;font-weight:bold;line-height:100%;letter-spacing:-1px;text-align:justify;color:#ffffff!important">Quiz Night</h1>
+
+<div style="text-align:justify">Join us for Eddington's monthly Quiz night! Test your trivia with general knowledge, music, and most importantly, finding a good team name. Bring a team with you or find one when you get here. Prizes to the first, second and last placed teams. <a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=46f5a80e70&amp;e=2aaf2f49e5" style="float:right;color:#404040!important;font-weight:bold!important;text-decoration:underline;text-decoration-color:#fff5!important" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3D46f5a80e70%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038626000&amp;usg=AOvVaw0g-gzj1l_IoVOo_QPeaaLO">see details</a></div>
+</div>
+
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse">
+
+	<tbody>
+        <tr>
+            <td valign="top">
+
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse" class="m_3256695243349130111mcnBoxedTextContentContainer">
+                    <tbody><tr>
+
+                        <td style="padding-top:9px;padding-left:18px;padding-bottom:9px;padding-right:18px">
+
+                            <table border="0" cellspacing="0" class="m_3256695243349130111mcnTextContentContainer" width="100%" style="min-width:100%!important;background-color:#404040;border-collapse:collapse">
+                                <tbody><tr>
+                                    <td valign="top" class="m_3256695243349130111mcnTextContent" style="padding:18px;color:#f2f2f2;font-family:Helvetica;font-size:14px;font-weight:normal;text-align:center;word-break:break-word;line-height:150%">
+                                        <div style="text-align:left"><span style="font-size:18px"><img data-emoji="📅" class="an1" alt="📅" aria-label="📅" src="https://fonts.gstatic.com/s/e/notoemoji/15.0/1f4c5/72.png" loading="lazy">&nbsp; Save the date:</span><br>
+&nbsp;</div>
+
+<div style="text-align:center">Eddington Residents Association<br>
+<span style="font-size:18px">Annual General Meeting<br>
+6pm Thursday 11th April</span><br>
+Details to follow in future newsletters<br>
+&nbsp;</div>
+
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                                                </tr>
+                                                            </tbody></table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="m_3256695243349130111templateFooter" style="border-collapse:collapse;background-color:#ffffff;border-top:0;border-bottom:0">
+                                        <tbody><tr>
+                                            <td align="center" valign="top">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="m_3256695243349130111templateContainer" style="border-collapse:collapse">
+                                                    <tbody><tr>
+                                                        <td valign="top" class="m_3256695243349130111footerContainer" style="padding-top:10px;padding-bottom:10px"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse">
+
+	<tbody>
+        <tr>
+            <td valign="top">
+
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse" class="m_3256695243349130111mcnBoxedTextContentContainer">
+                    <tbody><tr>
+
+                        <td style="padding-top:9px;padding-left:18px;padding-bottom:9px;padding-right:18px">
+
+                            <table border="0" cellspacing="0" class="m_3256695243349130111mcnTextContentContainer" width="100%" style="min-width:100%!important;background-color:#404040;border-collapse:collapse">
+                                <tbody><tr>
+                                    <td valign="top" class="m_3256695243349130111mcnTextContent" style="padding:18px;color:#f2f2f2;font-family:Helvetica;font-size:14px;font-weight:normal;text-align:center;word-break:break-word;line-height:125%">
+                                        <h1 style="display:block;margin:0;padding:0;font-family:Helvetica;font-size:40px;font-style:normal;font-weight:bold;line-height:100%;letter-spacing:-1px;text-align:center;color:#ffffff!important">What's on this month?</h1>
+
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse">
+    <tbody>
+        <tr>
+            <td valign="top" style="padding-top:9px">
+
+
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%;min-width:100%;border-collapse:collapse" width="100%" class="m_3256695243349130111mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="m_3256695243349130111mcnTextContent" style="padding:0px 18px 9px;color:#7b7777;font-size:14px;word-break:break-word;font-family:Helvetica;line-height:125%;text-align:center">
+
+                            <p style="color:#7b7777;font-size:14px;margin:10px 0;padding:0;font-family:Helvetica;line-height:125%;text-align:center"><span style="color:white;background-color:#4caad8;padding:0.2em 0.4em">key:</span> hover&nbsp;🛈&nbsp;for more information&nbsp; -&nbsp; 🖉 denotes signup required</p>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse">
+    <tbody>
+        <tr>
+            <td valign="top" style="padding-top:9px">
+
+
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%;min-width:100%;border-collapse:collapse" width="100%" class="m_3256695243349130111mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="m_3256695243349130111mcnTextContent" style="padding-top:0;padding-right:18px;padding-bottom:9px;padding-left:18px;word-break:break-word;color:#000000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center">
+
+                            <table id="events_table" style="border-collapse:collapse;text-align:left;font-size:14px;width:100%">
+	<tbody id="event_table_content">
+
+  </tbody>
+</table>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse">
+
+	<tbody>
+        <tr>
+            <td valign="top">
+
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse" class="m_3256695243349130111mcnBoxedTextContentContainer">
+                    <tbody><tr>
+
+                        <td style="padding-top:9px;padding-left:18px;padding-bottom:9px;padding-right:18px">
+
+                            <table border="0" cellspacing="0" class="m_3256695243349130111mcnTextContentContainer" width="100%" style="min-width:100%!important;background-color:#404040;border-collapse:collapse">
+                                <tbody><tr>
+                                    <td valign="top" class="m_3256695243349130111mcnTextContent" style="padding:18px;color:#f2f2f2;font-family:Helvetica;font-size:14px;font-weight:normal;text-align:center;word-break:break-word;line-height:125%">
+                                        <h1 style="text-align:left;display:block;margin:0;padding:0;font-family:Helvetica;font-size:40px;font-style:normal;font-weight:bold;line-height:100%;letter-spacing:-1px;color:#ffffff!important"><span style="font-size:30px">Help Us To Organise Future <span class="il">Events</span></span></h1>
+
+<div style="text-align:left"><br>
+The ERA is helping to build a vibrant, welcoming and connected <span class="il">community</span> here in Eddington. It is run by a handful of volunteers who don't claim to know what they're doing.&nbsp;<br>
+<br>
+If you would like to help&nbsp;there are lots of ways to get involved:</div>
+
+<ul>
+	<li style="text-align:left">Spread the word&nbsp;about our <span class="il">events</span> to neighbours on social media</li>
+	<li style="text-align:left">Volunteer to help at an <span class="il">event</span></li>
+	<li style="text-align:left">Propose an <span class="il">event</span> you'd like to run with our support</li>
+	<li style="text-align:left">Join the committee and help direct the future of the ERA</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse">
+    <tbody>
+        <tr>
+            <td style="padding-top:0;padding-right:18px;padding-bottom:18px;padding-left:18px" valign="top" align="center">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate!important;border-radius:4px;background-color:#2baadf">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="middle" style="font-family:Arial;font-size:16px;padding:18px">
+                                <a class="m_3256695243349130111mcnButton" title="Get In Touch to Join In!" href="mailto:info@eddingtonra.org" style="font-weight:bold;letter-spacing:normal;line-height:100%;text-align:center;text-decoration:none;color:#ffffff;display:block" target="_blank">Get In Touch to Join In!</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="m_3256695243349130111mcnDividerBlock" style="min-width:100%;border-collapse:collapse;table-layout:fixed!important">
+    <tbody>
+        <tr>
+            <td style="min-width:100%;padding:40px 18px 20px">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-top:1px solid #000000;border-collapse:collapse">
+                    <tbody><tr>
+                        <td>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-collapse:collapse">
+    <tbody>
+        <tr>
+            <td valign="top" style="padding-top:9px">
+
+
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%;min-width:100%;border-collapse:collapse" width="100%" class="m_3256695243349130111mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="m_3256695243349130111mcnTextContent" style="padding-top:0;padding-right:18px;padding-bottom:9px;padding-left:18px;word-break:break-word;color:#000000;font-family:Helvetica;font-size:11px;line-height:125%;text-align:center">
+
+                            <a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=9e67c38e7c&amp;e=2aaf2f49e5" style="color:#000000;font-weight:normal;text-decoration:underline" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3D9e67c38e7c%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038627000&amp;usg=AOvVaw26q84fbLyFPH2mL-6ZQJJW"><img align="center" alt="Follow us on Instagram" height="64" src="https://ci3.googleusercontent.com/meips/ADKq_NbZuMUvHQ_8KgelEQXTxs9ZhWsCvYT2-GD5GWi0GEh98VGSSNUIpQPRJnMKASDXAhrGWn6qqAPz_hRrfIivdUH3HHIsr90oG7MqJavT0WAQV0dZtKqNJmNF02tfnYCpOnmEpYeDCS2vcamHt1fs4HoHwDQlcnDBPck=s0-d-e1-ft#https://mcusercontent.com/77028e27d8594eefd09bbb473/images/bcc5543e-1aee-923e-3c81-07b20da52b8a.png" style="display:inline-block;vertical-align:top;border:0px;width:64px;height:64px;margin:0px 50px 0px 0px;outline:none;text-decoration:none" width="64" class="CToWUd" data-bit="iit"></a> <a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=6cfdf400a2&amp;e=2aaf2f49e5" style="color:#000000;font-weight:normal;text-decoration:underline" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3D6cfdf400a2%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038627000&amp;usg=AOvVaw0ORwrbE5VRSPXi_c_eJA-z"> <img alt="Follow us on Twitter" height="64" src="https://ci3.googleusercontent.com/meips/ADKq_NaiqTNpfIDHyjRh4n0y7EpLCeH9yS8fYfEiMkooNMIlPa0iCt-iziGkf7dO0HO6EjJDJHjpi4HUS0dJbpE4J6egxbTWIRv5V_k6O9n8DYzwgR7AJXyK7gGQ1G3r_o7vK8PJjB7quDzYgXYQXFCb5c8l0qe4vqYLMKU=s0-d-e1-ft#https://mcusercontent.com/77028e27d8594eefd09bbb473/images/ceb2b3a6-6d30-1b82-70e7-39fb03af28c5.png" style="display:inline-block;vertical-align:top;border:0px;width:64px;height:64px;margin:0px 50px 0px 0px;outline:none;text-decoration:none" width="64" class="CToWUd" data-bit="iit"></a> <a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=2dff5803a7&amp;e=2aaf2f49e5" style="color:#000000;font-weight:normal;text-decoration:underline" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3D2dff5803a7%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038627000&amp;usg=AOvVaw02OKEjwMlGyK74PsLPPwag"> <img height="64" src="https://ci3.googleusercontent.com/meips/ADKq_NZtr3pynLqAuf5F9ibB1EhR043SqUm3FvYc68NlrO9RMx_5M5qzQ6LOld11vhyKmwLfB0abmfz3LmJ_mTAmweX2QMOk_nNedN9U_VAdEOFWZ9g_2dz152m0kiYAT4-RRSQ4GJ-nOPU2_65hZ0liF1dUZqz3vBIv2Pw=s0-d-e1-ft#https://mcusercontent.com/77028e27d8594eefd09bbb473/images/1b4d7be7-0aac-7a1a-d230-26b03bc73f1b.png" style="display:inline-block;vertical-align:top;border:0px;width:64px;height:64px;margin:0px;outline:none;text-decoration:none" width="64" class="CToWUd" data-bit="iit"></a><br>
+<br>
+<br>
+<span style="font-size:18px">View <a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=f152a838c4&amp;e=2aaf2f49e5" style="color:#000000;font-weight:normal;text-decoration:underline" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3Df152a838c4%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038627000&amp;usg=AOvVaw0nLPmDeUHPtDXILqyTPlZs">newsletter archive</a> and <a href="https://eddingtonra.us5.list-manage.com/track/click?u=77028e27d8594eefd09bbb473&amp;id=1de5d0dc0f&amp;e=2aaf2f49e5" style="color:#000000;font-weight:normal;text-decoration:underline" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/track/click?u%3D77028e27d8594eefd09bbb473%26id%3D1de5d0dc0f%26e%3D2aaf2f49e5&amp;source=gmail&amp;ust=1709151038627000&amp;usg=AOvVaw1KnLcsjaNe2uctY7pGwEvb">subscribe to future editions</a></span><br>
+<br>
+<em>Copyright © 2024 Eddington Residents Association, All rights reserved.</em><br>
+Want to change how you receive these emails?<br>
+You can <a href="https://eddingtonra.us5.list-manage.com/profile?u=77028e27d8594eefd09bbb473&amp;id=4e3157944d&amp;e=2aaf2f49e5&amp;c=4cc811b708" style="color:#000000;font-weight:normal;text-decoration:underline" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/profile?u%3D77028e27d8594eefd09bbb473%26id%3D4e3157944d%26e%3D2aaf2f49e5%26c%3D4cc811b708&amp;source=gmail&amp;ust=1709151038627000&amp;usg=AOvVaw3CydnshgWlRBQI0L8FENOy">update your preferences</a> or <a href="https://eddingtonra.us5.list-manage.com/unsubscribe?u=77028e27d8594eefd09bbb473&amp;id=4e3157944d&amp;t=b&amp;e=2aaf2f49e5&amp;c=4cc811b708" style="color:#000000;font-weight:normal;text-decoration:underline" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://eddingtonra.us5.list-manage.com/unsubscribe?u%3D77028e27d8594eefd09bbb473%26id%3D4e3157944d%26t%3Db%26e%3D2aaf2f49e5%26c%3D4cc811b708&amp;source=gmail&amp;ust=1709151038627000&amp;usg=AOvVaw2ImwoDGqAFo048dsNtdHo6">unsubscribe from this list</a>.<br>
+<br>
+ <a href="http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter&amp;utm_medium=email&amp;utm_campaign=referral_marketing&amp;aid=77028e27d8594eefd09bbb473&amp;afl=1" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.mailchimp.com/email-referral/?utm_source%3Dfreemium_newsletter%26utm_medium%3Demail%26utm_campaign%3Dreferral_marketing%26aid%3D77028e27d8594eefd09bbb473%26afl%3D1&amp;source=gmail&amp;ust=1709151038627000&amp;usg=AOvVaw1am6si-nj_aOOUVp1ZNsVu"><img src="https://ci3.googleusercontent.com/meips/ADKq_NYHg4A_eO7AtG2QRqvAXzod1lc-zhGxWkINfTAEdUnrhQkN76wHuKQ97nGFQ-5vf80adDglQ1guSBAh-SyNyGEFZXq-JR7wz_k_C8p6bc9ga6YG-9fw-J6eWwcUfw=s0-d-e1-ft#https://cdn-images.mailchimp.com/monkey_rewards/intuit-mc-rewards-2.png" border="0" alt="Email Marketing Powered by Mailchimp" title="Mailchimp Email Marketing" width="137" height="53" style="max-width:100%;height:auto" class="CToWUd" data-bit="iit"></a>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="m_3256695243349130111mcnDividerBlock" style="min-width:100%;border-collapse:collapse;table-layout:fixed!important">
+    <tbody>
+        <tr>
+            <td style="min-width:100%;padding:10px 18px 25px">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-top:2px solid #eeeeee;border-collapse:collapse">
+                    <tbody><tr>
+                        <td>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="m_3256695243349130111mcnDividerBlock" style="min-width:100%;border-collapse:collapse;table-layout:fixed!important">
+    <tbody>
+        <tr>
+            <td style="min-width:100%;padding:40px 18px 20px">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;border-top:1px solid #000000;border-collapse:collapse">
+                    <tbody><tr>
+                        <td>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                    </td>
+                </tr>
+            </tbody></table>
+        </center>
+    <img src="https://ci3.googleusercontent.com/meips/ADKq_NYWljQraA9sGuMY8ei2MWpKgjl3t2-RON8GAmnULSpJS1OTxJCfC-i2275W0UFQPt_ycl3ba15Rma_fEWhHqgV5D1O4CsH5wUsSP6f74CrE7VIkdPw_yz8HbcLJ4KME9OKQpKPLQUqcY0uuud7RMX5d1nWV2O_rNNQnOXez9DLr3rSo=s0-d-e1-ft#https://eddingtonra.us5.list-manage.com/track/open.php?u=77028e27d8594eefd09bbb473&amp;id=4cc811b708&amp;e=2aaf2f49e5" height="1" width="1" alt="" class="CToWUd" data-bit="iit"></div><div class="yj6qo"></div><div class="adL">
+</div></div></div><div class="hi"></div><div class="WhmR8e" data-hash="0"></div></div>
