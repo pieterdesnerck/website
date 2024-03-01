@@ -44,10 +44,11 @@ function fetchEventsData(callback){
   })
 }
 
-function makeNewsletterHtmlForMonth(sheet_data, now_date, end_date){
+function makeNewsletterHtmlForMonth(sheet_data, now_date, end_date, month_skip){
   var now = now_date ?? new Date();
-  var month_start = new Date(now.getFullYear(), now.getMonth() + 1, 1);
-  var month_end = end_date ?? new Date(now.getFullYear(), now.getMonth() + 2, 1);
+  var month_skip = month_skip ?? 1;
+  var month_start = new Date(now.getFullYear(), now.getMonth() + month_skip, 1);
+  var month_end = end_date ?? new Date(now.getFullYear(), now.getMonth() + month_skip + 1 , 1);
   console.log(`looking for events between ${month_start} and ${month_end}`);
   var all_events = sheet_data.slice(1)
   for(i in all_events){
@@ -71,17 +72,17 @@ function makeNewsletterHtmlForMonth(sheet_data, now_date, end_date){
       html += `<tr class="month"><td colspan=2>${date.toLocaleString('default', { month: 'long' }).toUpperCase()}</td></tr>\n`;
     }
     var weekend_class = [0, 6].includes(date.getDay()) ? "weekend" : "";
-    var date_str = date.toLocaleString('default', {weekday: "short"}) + " " + date.toLocaleString('default', {day: "numeric"});
+    var date_str = date.toLocaleString('default', {weekday: "short"}) + " " + date.toLocaleString('default', {day: "numeric"}) + date_th(date);
     var next_date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
     var day_events = month_events.filter((x)=>x[DATE] >= date && x[DATE] < next_date)
     day_events.sort((x, y) => x[START_TIME].getTime() - y[START_TIME].getTime());
 
     time_range = (x) => short_time(x[START_TIME], x[END_TIME]) + "-" + short_time(x[END_TIME]);
-    signup_icon = (x) => x[NEEDS_SIGNUP] == "Yes" ? `<a class="signup-required" title="requires signup before you attend" href="${x[URL]}">🖉</a>` : ""
+    signup_icon = (x) => x[NEEDS_SIGNUP] == "Yes" ? `<span class="signup-required-badge" title="requires signup before you attend">sign</span>` : ""
 
     for(event of day_events){
       let d = event[DATE]
-      let dateline = `${d.toLocaleString('default', {weekday: "short"})} ${d.toLocaleString('default', {day: "numeric", })}${date_th(d)} ${d.toLocaleString('default', {month: "short" })} ${time_range(event)} @&nbsp;${event[LOCATION]}`
+      let dateline = `${d.toLocaleString('default', {weekday: "short"})} ${d.toLocaleString('default', {day: "numeric", })}${date_th(d)} ${d.toLocaleString('default', {month: "long" })} ${time_range(event)} @&nbsp;${event[LOCATION]}`
       let link_text = event[NEEDS_SIGNUP] == "Yes" ? "sign up" : "see details"
       let link = event[URL].trim() ? `\n<a href="${event[URL]}">${link_text}</a>` : ""
       features += `<div class="headline-event">\n<div>${dateline}</div>\n<h1>${event[NAME]}</h1>\n<div>${event[DESCRIPTION]}${link}</div>\n</div>\n\n\n`
@@ -93,7 +94,7 @@ function makeNewsletterHtmlForMonth(sheet_data, now_date, end_date){
           +`        <a href="${x[URL]}">${x[NAME]}</a>\n`
           +`        ${x[LOCATION]}\n`
           +`        ${signup_icon(x)}\n`
-          +`        <i>🛈</i>\n`
+          +`        <span class="more-info-badge">info</span>\n`
           +`      </span>\n\n`
       ).join("\n")
 
@@ -107,6 +108,8 @@ function makeNewsletterHtmlForMonth(sheet_data, now_date, end_date){
     prev_date = date;
   }
   html += `  </tbody>\n</table>`
+
+  console.log(features)
   return html
 }
 

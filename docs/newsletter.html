@@ -5,6 +5,8 @@ permalink: newsletter
 
 <p>
 This page help generate the html needed for the monthly newsletter.
+<a class="btn btn-primary" href="?skip=0">current month</a>
+<a class="btn btn-primary" href="">next month</a>
 </p>
 
 <div id="events_html">
@@ -18,7 +20,9 @@ This page help generate the html needed for the monthly newsletter.
 window.addEventListener("load", (event) => {
   getEventsData(function(data){
     let $events_div = document.getElementById("events_html")
-    let event_table_rows = makeNewsletterHtmlForMonth(data);
+    const urlParams = new URLSearchParams(window.location.search);
+    skip = parseInt(urlParams.get('skip') ?? "1")
+    let event_table_rows = makeNewsletterHtmlForMonth(data, undefined, undefined, skip);
     $events_div.getElementsByClassName("loading")[0].classList.add("d-none")
     $events_div.getElementsByClassName("raw")[0].innerHTML = event_table_rows
     document.getElementById("event_table_content").innerHTML = event_table_rows
@@ -42,8 +46,6 @@ specifics of the layout and style may be misleading.
     color: #404040!important;
     text-decoration-color:#fff5!important;
     font-weight: bold!important;
-
-
 }
 .headline-event > div > a:hover {
 	color: #202020!important;
@@ -54,7 +56,6 @@ specifics of the layout and style may be misleading.
 	text-align: left;
     font-size: 14px;
     width: 100%;
-    max-width: 400px;
 }
 #events_table tr.day td, tr.month td {
 	padding: 0.5em;
@@ -71,17 +72,14 @@ specifics of the layout and style may be misleading.
 #events_table tr.day a, .blue-links a {
 	color: #4caad8!important;
 }
-
 #events_table .date {
-  white-space: nowrap;
-
+	white-space: nowrap;
 }
-
 #events_table .event {
 	display: inline-block;
-  padding: 0 0 0.5em;
-  white-space: nowrap;
-  overflow: hidden;
+    padding: 0 0 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
 }
 #events_table .event i {
 	font-style: normal;
@@ -89,16 +87,27 @@ specifics of the layout and style may be misleading.
     vertical-align: middle;
     cursor: pointer;
 }
-#events_table .signup-required {
+.signup-required-badge,
+.more-info-badge {
 	text-decoration: none;
-    opacity: 0.5;
-    filter: grayscale(1);
+    font-size: 10px;
+    font-family: monospace;
+    color: white;
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding: 3px 5px;
+    font-weight: bold;
+    margin-left: 2px;
+    opacity: 0.7;
 }
-
-#events_table .event i:hover,
-#events_table .signup-required:hover {
+.more-info-badge {
+    background-color: lightblue;
+}
+.signup-required-badge:hover,
+.more-info-badge:hover {
 	opacity: 1;
 }
+
 </style>
 
 <div class=""><div class="aHl"></div><div id=":3yt" tabindex="-1"></div><div id=":3vq" class="ii gt" jslog="20277; u014N:xr6bB; 1:WyIjdGhyZWFkLWY6MTc4OTgyMDMyNTc5MTgyNjc5MSJd; 4:WyIjbXNnLWY6MTc4OTgyMDMyNTc5MTgyNjc5MSJd"><div id=":3vr" class="a3s aiL msg3256695243349130111"><u></u>
@@ -435,7 +444,9 @@ Details to follow in future newsletters<br>
 
                         <td valign="top" class="m_3256695243349130111mcnTextContent" style="padding:0px 18px 9px;color:#7b7777;font-size:14px;word-break:break-word;font-family:Helvetica;line-height:125%;text-align:center">
 
-                            <p style="color:#7b7777;font-size:14px;margin:10px 0;padding:0;font-family:Helvetica;line-height:125%;text-align:center"><span style="color:white;background-color:#4caad8;padding:0.2em 0.4em">key:</span> hover&nbsp;🛈&nbsp;for more information&nbsp; -&nbsp; 🖉 denotes signup required</p>
+                            <p style="color:#7b7777;font-size:14px;margin:10px 0;padding:0;font-family:Helvetica;line-height:125%;text-align:center">
+                              (mouse over&nbsp;<span class="more-info-badge">info</span> for more information, <span class="signup-required-badge" title="requires signup before you attend">sign</span> denotes signup is required)
+                            </p>
 
                         </td>
                     </tr>
