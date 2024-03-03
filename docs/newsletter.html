@@ -6,7 +6,7 @@ permalink: newsletter
 <p>
 This page help generate the html needed for the monthly newsletter.
 <a class="btn btn-primary" href="?skip=0">current month</a>
-<a class="btn btn-primary" href="">next month</a>
+<a class="btn btn-primary" href="?skip=1">next month</a>
 </p>
 
 <div id="events_html">
@@ -22,7 +22,8 @@ window.addEventListener("load", (event) => {
     let $events_div = document.getElementById("events_html")
     const urlParams = new URLSearchParams(window.location.search);
     skip = parseInt(urlParams.get('skip') ?? "1")
-    let event_table_rows = makeNewsletterHtmlForMonth(data, undefined, undefined, skip);
+    var events = getEventsForMonth(data, skip)
+    let event_table_rows = makeNewsletterHtml(events);
     $events_div.getElementsByClassName("loading")[0].classList.add("d-none")
     $events_div.getElementsByClassName("raw")[0].innerHTML = event_table_rows
     document.getElementById("event_table_content").innerHTML = event_table_rows

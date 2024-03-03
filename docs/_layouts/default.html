@@ -137,14 +137,14 @@
     }
 
     a { text-decoration: none;}
-    p > a {
+    p > a:not(.btn) {
       color: black;
       display: inline-block;
       text-decoration: underline 0.1em solid rgba(76, 170, 216, 1);
       text-decoration-skip-ink: auto;
       transition: all .1s ease-in;
     }
-    p > a:hover {
+    p > a:not(.btn):hover {
       text-decoration: underline 0.2em solid rgba(76, 170, 216, 0.5);
       text-decoration-skip-ink: none;
       transform: scale(105%, 105%);

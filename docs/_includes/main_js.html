@@ -44,12 +44,16 @@ function fetchEventsData(callback){
   })
 }
 
-function makeNewsletterHtmlForMonth(sheet_data, now_date, end_date, month_skip){
-  var now = now_date ?? new Date();
+function getEventsForMonth(sheet_data, month_skip){
+  var now = new Date();
   var month_skip = month_skip ?? 1;
   var month_start = new Date(now.getFullYear(), now.getMonth() + month_skip, 1);
-  var month_end = end_date ?? new Date(now.getFullYear(), now.getMonth() + month_skip + 1 , 1);
-  console.log(`looking for events between ${month_start} and ${month_end}`);
+  var month_end = new Date(now.getFullYear(), now.getMonth() + month_skip + 1 , 1);
+  return getEventsForPeriod(sheet_data, month_start, month_end)
+}
+
+function getEventsForPeriod(sheet_data, start_date, end_date){
+  console.log(`looking for events between ${start_date} and ${end_date}`);
   var all_events = sheet_data.slice(1)
   for(i in all_events){
     for(field of [DATE_SUBMITTED, DATE_APPROVED, DATE]){
@@ -60,13 +64,30 @@ function makeNewsletterHtmlForMonth(sheet_data, now_date, end_date, month_skip){
     }
   }
   console.log(all_events)
-  var month_events = all_events.filter((x)=>x[DATE_APPROVED] && x[DATE_APPROVED] > x[DATE_SUBMITTED] && x[DATE] >= month_start && x[DATE] < month_end);
+  var filtered_events = all_events.filter((x)=>x[DATE_APPROVED] && x[DATE_APPROVED] > x[DATE_SUBMITTED] && x[DATE] >= start_date && x[DATE] < end_date);
 
-  console.log(`${month_events.length} events found for ${month_start.toLocaleString('default', { month: 'long' })}`);
+  console.log(`${filtered_events.length} events found for period`);
+  return filtered_events
+}
 
+function makeNewsletterHtml(events, start_date){
   var html = `<table id="events_table">\n  <tbody>`
+  if(!events.length){
+    html += "<tr><td style='padding: 5em 10em; font-style: italic;'>No events found</td></tr></tbody></table>"
+    return html
+  }
   var features = ""
-  var prev_date = month_end;
+  var first_event_date = new Date(Math.min(...events.map((x)=>x[DATE])));
+  var last_event_date = new Date(Math.max(...events.map((x)=>x[DATE])));
+  var prev_date = new Date(first_event_date.getFullYear(), first_event_date.getMonth - 1, 1);
+  if(start_date){
+    var month_start = start_date
+    var month_end = last_event_date
+  }else{
+    var month_start = new Date(first_event_date.getFullYear(), first_event_date.getMonth(), 1);
+    var month_end = new Date(last_event_date.getFullYear(), last_event_date.getMonth() + 1, -1);
+  }
+  console.log(`making html for ${events.length} events between ${first_event_date} and ${last_event_date}`);
   for(var date = month_start; date < month_end; date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1)){
     if(prev_date.getMonth() != date.getMonth()){
       html += `<tr class="month"><td colspan=2>${date.toLocaleString('default', { month: 'long' }).toUpperCase()}</td></tr>\n`;
@@ -74,7 +95,7 @@ function makeNewsletterHtmlForMonth(sheet_data, now_date, end_date, month_skip){
     var weekend_class = [0, 6].includes(date.getDay()) ? "weekend" : "";
     var date_str = date.toLocaleString('default', {weekday: "short"}) + " " + date.toLocaleString('default', {day: "numeric"}) + date_th(date);
     var next_date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
-    var day_events = month_events.filter((x)=>x[DATE] >= date && x[DATE] < next_date)
+    var day_events = events.filter((x)=>x[DATE] >= date && x[DATE] < next_date)
     day_events.sort((x, y) => x[START_TIME].getTime() - y[START_TIME].getTime());
 
     time_range = (x) => short_time(x[START_TIME], x[END_TIME]) + "-" + short_time(x[END_TIME]);
