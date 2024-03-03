@@ -44,11 +44,16 @@ function fetchEventsData(callback){
   })
 }
 
+function addMonths(date, n){
+  // returns first day of the month, n months from provided date
+  return new Date(date.getFullYear(), date.getMonth() + (n ?? 0), 1)
+}
+
 function getEventsForMonth(sheet_data, month_skip){
   var now = new Date();
   var month_skip = month_skip ?? 1;
-  var month_start = new Date(now.getFullYear(), now.getMonth() + month_skip, 1);
-  var month_end = new Date(now.getFullYear(), now.getMonth() + month_skip + 1 , 1);
+  var month_start = addMonths(now, month_skip)
+  var month_end = addMonths(now, month_skip + 1);
   return getEventsForPeriod(sheet_data, month_start, month_end)
 }
 
@@ -79,16 +84,15 @@ function makeNewsletterHtml(events, start_date){
   var features = ""
   var first_event_date = new Date(Math.min(...events.map((x)=>x[DATE])));
   var last_event_date = new Date(Math.max(...events.map((x)=>x[DATE])));
-  var prev_date = new Date(first_event_date.getFullYear(), first_event_date.getMonth - 1, 1);
+  var prev_date = addMonths(first_event_date, -1);
   if(start_date){
-    var month_start = start_date
-    var month_end = last_event_date
+    var end_date = addMonths(last_event_date, 1)
   }else{
-    var month_start = new Date(first_event_date.getFullYear(), first_event_date.getMonth(), 1);
-    var month_end = new Date(last_event_date.getFullYear(), last_event_date.getMonth() + 1, -1);
+    var start_date = addMonths(first_event_date, 0)
+    var end_date = addMonths(first_event_date, 1)
   }
   console.log(`making html for ${events.length} events between ${first_event_date} and ${last_event_date}`);
-  for(var date = month_start; date < month_end; date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1)){
+  for(var date = start_date; date < end_date; date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1)){
     if(prev_date.getMonth() != date.getMonth()){
       html += `<tr class="month"><td colspan=2>${date.toLocaleString('default', { month: 'long' }).toUpperCase()}</td></tr>\n`;
     }

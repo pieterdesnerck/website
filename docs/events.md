@@ -21,10 +21,8 @@ via our [newsletter](/newsletter) and on our
 window.addEventListener("load", (event) => {
   getEventsData(function(data){
     var now = new Date();
-    start = now;
-    var end  = new Date(now.getFullYear(), now.getMonth() + 2, 1);
-    var events = getEventsForPeriod(data, start, end)
-    document.getElementById("events_html").innerHTML = makeNewsletterHtml(events, start);
+    var events = getEventsForPeriod(data, now, addMonths(now, 3))
+    document.getElementById("events_html").innerHTML = makeNewsletterHtml(events, now);
   });
 })
 </script>
