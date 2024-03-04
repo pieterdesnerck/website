@@ -4,6 +4,7 @@ permalink: archive/routes
 redirect_from:
   - /routes
 ---
+
 There are many beautiful walking, cycling and running routes around Eddington. On this page we list some of our favourite routes, so that you could try these out yourself!
 
 <h4>Coton Countryside Reserve Walk </h4>
