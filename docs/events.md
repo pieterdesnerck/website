@@ -10,7 +10,8 @@ via our [newsletter](/newsletter) and on our
 [media](https://x.com/EddingtonRA)
 [accounts](https://m.facebook.com/EddingtonRA).
 
-<a class="btn btn-primary" href="https://forms.gle/paW22ugLwrbk4Ccb8">Submit your event</a>
+See [how we could help](/events/help-for-your-event), or
+<a class="btn btn-sm btn-primary" href="https://forms.gle/paW22ugLwrbk4Ccb8" target="_BLANK">Submit your event</a>
 
 <div id="events_html">
   <i>Loading events....</i>
