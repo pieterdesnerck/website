@@ -29,7 +29,7 @@ The Association wants to help residents connect with neighbours and the wider Ca
 </div>
 </div>
 
-Want to stay up to date with all the events we organise and with exciting developments in our neighbourhood? Subscribe to our newsletter!
+Want to stay up to date with community events and developments in our neighbourhood?
 [Subscribe to the ERA monthly newsletter](https://mailchi.mp/4f5aeb4b817a/eddingtonra){: class="btn btn-primary"}
 
 ## We are your neighbours
