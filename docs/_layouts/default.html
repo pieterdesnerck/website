@@ -16,7 +16,6 @@
     <style>
       body {
         background-color: white;
-        padding-bottom: 33vh;
       }
 
     :root {
@@ -123,6 +122,16 @@
       top: 1em;
     }
 
+    footer {
+      position: relative;
+      width: 100%;
+      background-color: white;
+      padding: 2em 20vw;
+      margin-top: 66vh;
+      min-height: 33vh;
+      box-shadow: 0 0 2vh black;
+    }
+
 
 
     .committee-images > div {
@@ -187,11 +196,22 @@
       <br>
       <br>
       <br>
-      <p>
-        This site is open source.
-        <a href="{{ site.github.repository_url }}/tree/main/docs/{{ page.path }}" target="_BLANK">
-          Contribute to this page</a>.
-      </p>
     </main>
+    <footer>
+      <p>
+
+        <a href="/archive/routes">walking routes (archived)</a>
+        <br/>
+        <a href="/documents/constitution.pdf">ERA Constitution</a>
+        <br/>
+
+      </p>
+      <div class="text-center">This site is open source.
+        <p>
+          <a href="{{ site.github.repository_url }}/tree/main/docs/{{ page.path }}" target="_BLANK">
+            Contribute to this page</a>.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
