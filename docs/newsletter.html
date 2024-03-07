@@ -11,8 +11,10 @@ This page help generate the html needed for the monthly newsletter.
 
 <div id="events_html">
   <i class="loading">Loading events....</i>
-  events table rows:<br>
-  <textarea class="raw"></textarea>
+  Newsletter html:
+  <textarea class="newsletter_raw d-inline-block"></textarea>
+  Instagram Text:
+  <textarea class="instagram_raw d-inline-block"></textarea>
 </div>
 
 {% include main_js.html %}
@@ -25,7 +27,8 @@ window.addEventListener("load", (event) => {
     var events = getEventsForMonth(data, skip)
     let event_table_rows = makeNewsletterHtml(events);
     $events_div.getElementsByClassName("loading")[0].classList.add("d-none")
-    $events_div.getElementsByClassName("raw")[0].innerHTML = event_table_rows
+    $events_div.getElementsByClassName("newsletter_raw")[0].innerHTML = event_table_rows
+    $events_div.getElementsByClassName("instagram_raw")[0].innerHTML = makeInstagramText(events);
     document.getElementById("event_table_content").innerHTML = event_table_rows
   });
 })

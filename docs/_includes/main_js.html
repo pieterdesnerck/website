@@ -138,6 +138,47 @@ function makeNewsletterHtml(events, start_date){
   return html
 }
 
+function makeInstagramText(events, start_date){
+  var output = ""
+  if(!events.length){
+    return `No events found`
+  }
+  var first_event_date = new Date(Math.min(...events.map((x)=>x[DATE])));
+  var last_event_date = new Date(Math.max(...events.map((x)=>x[DATE])));
+  var prev_date = addMonths(first_event_date, -1);
+  if(start_date){
+    var end_date = addMonths(last_event_date, 1)
+  }else{
+    var start_date = addMonths(first_event_date, 0)
+    var end_date = addMonths(first_event_date, 1)
+  }
+  console.log(`making text list for ${events.length} events between ${first_event_date} and ${last_event_date}`);
+  for(var date = start_date; date < end_date; date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1)){
+    if(prev_date.getMonth() != date.getMonth()){
+      output += `${date.toLocaleString('default', { month: 'long' })} Events in Eddington\n\n`;
+    }
+
+    var date_str = date.toLocaleString('default', {weekday: "short"}) + " " + date.toLocaleString('default', {day: "numeric"}) + date_th(date);
+    var next_date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+    var day_events = events.filter((x)=>x[DATE] >= date && x[DATE] < next_date)
+    day_events.sort((x, y) => x[START_TIME].getTime() - y[START_TIME].getTime());
+
+    time_range = (x) => short_time(x[START_TIME], x[END_TIME]) + "-" + short_time(x[END_TIME]);
+    signup_notice = (x) => x[NEEDS_SIGNUP] == "Yes" ? `, booking required` : ""
+    price = (x) => x[PRICE] == "0" ? `free` : `£${x[PRICE]}`
+
+    output += day_events.map(
+      (x)=>`📅 ${date_str}, ${time_range(x)} - ${x[NAME]} at ${x[LOCATION]}\n`
+          +`${x[DESCRIPTION].trim()}\n`
+          +`${price(x)} ${signup_notice(x)}\n`
+          +`${x[URL]}\n\n`
+      ).join("\n")
+
+    prev_date = date;
+  }
+  return output
+}
+
 function parseDate(d){
   // converts date strings "15/05/2024 00:00:00" to "2024-05-15 00:00:00" which js Date can parse
   if(!d){return}
