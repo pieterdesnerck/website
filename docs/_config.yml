@@ -7,6 +7,9 @@ defaults:
 
 repository: Eddington-Residents-Association/website
 
+collections:
+  - meetings
+
 plugins:
 - jekyll-github-metadata
 - jekyll-mentions

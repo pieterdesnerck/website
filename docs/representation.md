@@ -5,6 +5,25 @@ permalink: representation
 
 The ERA is a member of [FeCRA](https://www.fecra.org.uk/) (Federation of Cambridge Residents’ Associations), and is representing the Eddington residents in different groups and committees locally and city-wide.
 
+{% assign now_timestamp = "now"|date:"%s"|plus:0 %}
+{% for meeting in site.meetings %}
+{% assign next_meeting_timestamp = meeting.next_date|date:"%s"|plus:0 %}
+
+## {{ meeting.organisation }}
+
+Meets {{ meeting.frequency }}, next meeting:
+{% if next_meeting_timestamp > now_timestamp -%}
+  {{ meeting.next_date|date: "%A %d %B %Y"}}
+{%- else -%}
+  TBD
+{%- endif %}
+
+{{ meeting.content }}
+
+{% for date in meeting.prev_dates %}{{ date|date: "%d %B %Y"  }},   {% endfor %}
+
+{% endfor %}
+
 ## ERA - Portal Joint Committee
 
 * Next meeting - 12th December 2023
