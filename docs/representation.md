@@ -25,7 +25,7 @@ Meets {{ meeting.frequency }}
   TBD
 {%- endif %}
 {%- if meeting.website -%}
-&nbsp; | &nbsp;  [organisation website](meeting.website)
+&nbsp; | &nbsp;  [organisation website]({{meeting.website}})
 {%- endif %}
 
 {{ meeting.content }}
