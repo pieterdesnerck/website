@@ -6,81 +6,44 @@ permalink: representation
 The ERA is a member of [FeCRA](https://www.fecra.org.uk/) (Federation of Cambridge Residents’ Associations), and is representing the Eddington residents in different groups and committees locally and city-wide.
 
 {% assign now_timestamp = "now"|date:"%s"|plus:0 %}
-{% for meeting in site.meetings %}
+{% assign meetings = site.meetings|sort:"-sort_order"|reverse %}
+
+{% for meeting in meetings %}
+{% assign collection = site.collections | where: "label", "meetings" | first %}
 {% assign next_meeting_timestamp = meeting.next_date|date:"%s"|plus:0 %}
+{% assign minutes_prefix = "/minutes/" | append:meeting.minutes_dir | append:"/" %}
+{% assign file_path_filter = "file.path contains '" | append:minutes_prefix | append:"'" %}
+{% assign minutes = collection.files | where_exp:"file", file_path_filter %}
 
-## {{ meeting.organisation }}
+## {{ meeting.organisation }} {{meeting.sort_order}}
 
-Meets {{ meeting.frequency }}, next meeting:
+Meets {{ meeting.frequency }}
+&nbsp; | &nbsp; next meeting:
 {% if next_meeting_timestamp > now_timestamp -%}
   {{ meeting.next_date|date: "%A %d %B %Y"}}
 {%- else -%}
   TBD
 {%- endif %}
+{%- if meeting.website -%}
+&nbsp; | &nbsp;  [organisation website](meeting.website)
+{%- endif %}
 
 {{ meeting.content }}
 
-{% for date in meeting.prev_dates %}{{ date|date: "%d %B %Y"  }},   {% endfor %}
+{%- if meeting.is_public_minutes -%}
+Previous meetings and minutes:<br/>
+{%- else -%}
+Previous meetings (minutes are not yet made public):<br/>
+{%- endif -%}
+{% for date in meeting.prev_dates -%}
+  {%- assign date_str = date|date: "%Y-%m-%d" -%}
+  {%- assign file_path_filter = "file.path contains '" | append: date_str | append:"'" -%}
+  {%- assign file = minutes | where_exp:"file", file_path_filter | first -%}
+  {%- assign day = date|date:"%-d" -%}
+  {%- if file %} <a href="{{ file.path }}">{%- include date_ordinal.md day=day %}{{- date|date: " %B %Y" -}}</a>,  
+  {%- else -%}
+  {{ date|date: "%-d %B %Y"  }},
+  {% endif -%}
+{%- endfor %}
 
 {% endfor %}
-
-## ERA - Portal Joint Committee
-
-* Next meeting - 12th December 2023
-* Meeting 12/09/2023 - Minutes
-* Meeting 13/06/2023 - Minutes
-* Meeting 14/03/2023 - Minutes
-* Meeting 13/12/2022 - Minutes
-* Meeting 18/10/2022 - Minutes
-* Meeting 14/06/2022 - Minutes
-* Meeting 08/03/2022 - Minutes
-* Meeting 14/12/2021 - Minutes
-* Meeting 26/10/2021 - Minutes
-* Meeting 08/06/2021 - Minutes
-* Meeting 21/03/2021 - Minutes
-* Meeting 08/12/2020 - Minutes
-* Meeting 08/09/2020 - Minutes
-* Meeting 09/06/2020 - Minutes
-* Meeting 10/03/2020 - Minutes
-* Terms of Reference
-
-## North West Cambridge Development Community Group
-
-* Next meeting 21/11/2023
-* Meeting 06/09/2022 - Minutes
-* Meeting 15/11/2021 - Minutes
-* Meeting 17/09/2020 - Minutes
-* Meeting 11/02/2020 - Minutes
-
-## North West Community and Wellbeing Group
-
-Minutes are not publicly available
-
-* Next meeting ND
-* Meeting 05/02/2020
-* Meeting 13/11/2019
-
-
-## Darwin Green Steering Group
-
-Minutes are not publicly available
-
-* Next meeting ND
-* Meeting 26/01/2022
-* Meeting 13/10/2021
-* Meeting 16/06/2021
-
-## Huntingdon Road Surgery Patient Group
-* Next meeting 05/2022
-* Meeting 09/11/2021
-* Meeting 07/09/2021 - Minutes
-
-## Eddington Transport Stakeholder Group
-
-Minutes are not publicly available
-
-* Next meeting ND
-* Meeting 03/11/2021
-* Meeting 28/07/2021
-* Meeting 20/04/2021
-* Meeting 18/01/2021
