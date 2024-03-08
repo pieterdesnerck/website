@@ -29,7 +29,7 @@ See [how we could help](/events/help-for-your-event), or
   }
   #events_table .date {
     text-align: right;
-    padding-right: 3em;
+    padding-right: 1.5em;
     text-wrap: nowrap;
   }
   #events_table td {
