@@ -53,6 +53,7 @@ Our committee is formed of volunteer local residents who meet each month.
 
 {% include committee_images.html filter="current" %}
 
-
-### Past committee members:
+<details>
+<summary>See former members of the committee</summary>
 {% include committee_images.html filter="-2" %}
+</details>
