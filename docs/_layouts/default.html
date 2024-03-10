@@ -107,7 +107,7 @@
       padding: 4em 2em 6em;
       border-radius: var(--menu-dim);
       color: #03090d;
-      overflow: hidden;
+      overflow: clip;
     }
 
     .logo, .logo > img{
@@ -216,9 +216,11 @@
     </style>
     <script>
       window.addEventListener("scroll", function(event) {
-        fadeOutTop = 1 - Math.max(0, this.scrollY/ (window.innerHeight/2));
-        fadeInBottom = 1 - Math.min(1, (document.documentElement.scrollHeight - window.innerHeight - this.scrollY)/ (window.innerHeight/2));
-        document.getElementById("bg").style.opacity = Math.max(fadeOutTop, fadeInBottom)
+        let fadeOutTop = 1 - Math.max(0, this.scrollY/ (window.innerHeight/2));
+        let fadeInBottom = 1 - Math.min(1, (document.documentElement.scrollHeight - window.innerHeight - this.scrollY)/ (window.innerHeight/2));
+        let opacity = Math.max(fadeOutTop, fadeInBottom)
+        document.getElementById("bg").style.opacity = opacity
+        document.getElementsByTagName("main")[0].classList.toggle("all-white", opacity<=0.1)
       }, false);
 
 

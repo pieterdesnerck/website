@@ -24,8 +24,15 @@ See [how we could help](/events/help-for-your-event), or
   }
   #events_table .month th {
     position: sticky;
-    top: -1em;
+    top: 0;
     z-index: 2;
+  }
+  main.all-white #events_table .month th {
+    background-color: white;
+  }
+  #events_table .month th h2 {
+    padding: 0;
+    margin: 0;
   }
   #events_table .date {
     text-align: right;
@@ -65,7 +72,7 @@ function makeEventsPageHtml(events, start_date){
   console.log(`making html for ${events.length} events between ${first_event_date} and ${last_event_date}`);
   for(var date = start_date; date < end_date; date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1)){
     if(prev_date.getMonth() != date.getMonth()){
-      html += `</tbody><tbody><tr class="month"><th colspan=2 ><h2>${date.toLocaleString('default', { month: 'long' })}</h2></th></tr>\n`;
+      html += `<tr class="month"><th colspan=2 ><h2>${date.toLocaleString('default', { month: 'long' })}</h2></th></tr>\n`;
     }
     var weekend_class = [0, 6].includes(date.getDay()) ? "weekend" : "";
     var date_str = date.toLocaleString('default', {weekday: "short"}) + " " + date.toLocaleString('default', {day: "numeric"}) + date_th(date);
