@@ -7,7 +7,7 @@ The ERA promotes and supports non-commercial local events to help build a connec
 Follow us on [Instagram](https://instagram.com/eddington_ra),
 [Twitter](https://x.com/EddingtonRA)
 and [Facebook](https://m.facebook.com/EddingtonRA) and
-sign up for [our newsletter](https://mailchi.mp/4f5aeb4b817a/eddingtonra) to receive a monthly
+sign up for [our newsletter](/newsletter) to receive a monthly
 digest to your inbox.
 
 Want to see your event on this list? Find out [how we can help](/events/help-for-your-event)
