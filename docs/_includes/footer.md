@@ -1,5 +1,6 @@
 <div class="col-12 col-md-4" markdown="1">
 
+[Newsletter](/newsletter)<br>
 [Walking Routes](/archive/routes) (archived)
 
 
