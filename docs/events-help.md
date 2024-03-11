@@ -21,7 +21,9 @@ be good candidates for ERA support and promotion the more they fulfill the follo
 * The event takes place within a short walk of Storey’s Field Centre
 * The event is free or cheap compared to similar alternatives
 * The event is novel, i.e. not a regularly scheduled event
-* Examples of events which the ERA have supported include: The Jubilee Picnic; Eddington Eats; Film Club; Quiz Night; Diwali Celebrations
+
+Examples of events which the ERA have supported include: The Jubilee Picnic, Eddington Eats,
+Film Club, Quiz Night, Diwali Celebrations.
 
 If you already run an event we can help you promote it on this site,
 via our [newsletter](https://us5.campaign-archive.com/home/?u=77028e27d8594eefd09bbb473&id=4e3157944d)

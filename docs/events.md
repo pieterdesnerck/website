@@ -10,6 +10,9 @@ and [Facebook](https://m.facebook.com/EddingtonRA) and
 sign up for [our newsletter](https://mailchi.mp/4f5aeb4b817a/eddingtonra) to receive a monthly
 digest to your inbox.
 
+Want to see your event on this list? Find out [how we can help](/events/help-for-your-event)
+with funding, volunteers and promotion.
+
 <div id="events_html">
   <i>Loading events....</i>
 </div>
@@ -17,6 +20,9 @@ digest to your inbox.
 
 {% include main_js.html %}
 <style>
+  #events_table {
+    margin-bottom: 10lvh;
+  }
   #events_table tbody {
     position: relative;
   }
