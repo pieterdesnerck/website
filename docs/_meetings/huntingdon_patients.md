@@ -2,7 +2,7 @@
 organisation: Huntingdon Road Surgery Patient Group
 minutes_dir: huntingdon_patients
 date: 2050-01-01  # hack for sort order until Jekyll v4
-frequency: dissolved (?)
+frequency: no longer (?)
 is_public_minutes: true
 website: https://huntingdonroadsurgery.co.uk/patient-participation-group
 next_date:

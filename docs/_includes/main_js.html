@@ -15,7 +15,9 @@ const DESCRIPTION = 10;
 function getEventsData(callback){
   let events_data = localStorage.getItem("events_data")
   let events_last_polled = parseInt(localStorage.getItem("events_last_polled"))
-  if( events_data && events_last_polled >= Date.now() - 3600 * 1000){
+  const urlParams = new URLSearchParams(window.location.search);
+  reload = parseInt(urlParams.get('reload') ?? "0")
+  if( events_data && events_last_polled >= Date.now() - 3600 * 1000 && !reload){
     console.log("loading events from fresh local cache")
     return callback(JSON.parse(events_data))
   }

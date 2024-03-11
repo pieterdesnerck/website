@@ -3,19 +3,17 @@ title: Events in Eddington
 permalink: events
 ---
 
-The ERA aims to promote non-commercial local events to help build a connected community.
-If you run an event we can help you promote it on this site,
-via our [newsletter](/newsletter) and on our
-[social](https://instagram.com/eddington_ra)
-[media](https://x.com/EddingtonRA)
-[accounts](https://m.facebook.com/EddingtonRA).
-
-See [how we could help](/events/help-for-your-event), or
-<a class="btn btn-sm btn-primary" href="https://forms.gle/paW22ugLwrbk4Ccb8" target="_BLANK">Submit your event</a>
+The ERA promotes and supports non-commercial local events to help build a connected community.
+Follow us on [Instagram](https://instagram.com/eddington_ra),
+[Twitter](https://x.com/EddingtonRA)
+and [Facebook](https://m.facebook.com/EddingtonRA) and
+sign up for [our newsletter](https://mailchi.mp/4f5aeb4b817a/eddingtonra) to receive a monthly
+digest to your inbox.
 
 <div id="events_html">
   <i>Loading events....</i>
 </div>
+<p class="text-center"><a href="?reload=1" title="load latest events">⟳</a></p>
 
 {% include main_js.html %}
 <style>
@@ -47,6 +45,9 @@ See [how we could help](/events/help-for-your-event), or
   }
   #events_table .event {
     margin-bottom: 1em;
+  }
+  #events_table .day.weekend {
+    background-color: rgba(0, 0, 0, 0.05);
   }
 </style>
 <script>
@@ -80,16 +81,21 @@ function makeEventsPageHtml(events, start_date){
     var day_events = events.filter((x)=>x[DATE] >= date && x[DATE] < next_date)
     day_events.sort((x, y) => x[START_TIME].getTime() - y[START_TIME].getTime());
 
-    time_range = (x) => short_time(x[START_TIME], x[END_TIME]) + "-" + short_time(x[END_TIME]);
-    signup_icon = (x) => x[NEEDS_SIGNUP] == "Yes" ? `<span class="signup-required-badge" title="requires signup before you attend">sign</span>` : ""
+    time_range = function(x){
+      if(x[START_TIME].getHours() == 0 && x[END_TIME].getHours() == 0){
+        return "all day";
+      }
+      return short_time(x[START_TIME], x[END_TIME]) + "-" + short_time(x[END_TIME]);
+    }
+    info_link = (x) => x[NEEDS_SIGNUP] == "Yes" ? `sign&nbsp;up` : `details`
 
+    let sep = `<span class="separator">|</span>`
     var events_html = day_events.map(
-      (x)=>`${time_range(x)}\n`
-          +`    <a href="${x[URL]}">${x[NAME]}</a>\n`
-          +`    ${x[LOCATION]}\n`
-          +`    ${signup_icon(x)}\n<br>\n`
-          +`  ${x[DESCRIPTION].trim()}`
-          + (x[URL] ? `  <a href="${x[URL]}">details</a>`:"")
+      (x)=>`<a href="${x[URL]}">${x[NAME]}</a>\n`
+          +` ${sep} ${time_range(x)}\n`
+          +` ${sep} ${x[LOCATION]}\n<br/>\n`
+          +` ${x[DESCRIPTION].trim()}`
+          + (x[URL] ? `  <a href="${x[URL]}">${info_link(x)}</a>`:"")
           +`<br><br>\n\n`
       ).join("\n")
 

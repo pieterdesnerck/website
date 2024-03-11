@@ -3,7 +3,8 @@ title: Community Representation
 permalink: representation
 ---
 
-The ERA is a member of [FeCRA](https://www.fecra.org.uk/) (Federation of Cambridge Residents’ Associations), and is representing the Eddington residents in different groups and committees locally and city-wide.
+The ERA is a member of the [Federation of Cambridge Residents’ Associations](https://www.fecra.org.uk/)
+and represents Eddington residents in groups and committees locally and city-wide.
 
 {% assign now_timestamp = "now"|date:"%s"|plus:0 %}
 {% assign meetings = site.meetings|sort:"-sort_order"|reverse %}
@@ -18,14 +19,14 @@ The ERA is a member of [FeCRA](https://www.fecra.org.uk/) (Federation of Cambrid
 ## {{ meeting.organisation }} {{meeting.sort_order}}
 
 Meets {{ meeting.frequency }}
-&nbsp; | &nbsp; next meeting:
+<span class="separator">|</span> next meeting:
 {% if next_meeting_timestamp > now_timestamp -%}
   {{ meeting.next_date|date: "%A %d %B %Y"}}
 {%- else -%}
   TBD
 {%- endif %}
 {%- if meeting.website -%}
-&nbsp; | &nbsp;  [organisation website]({{meeting.website}})
+<span class="separator">|</span>  [organisation website]({{meeting.website}})
 {%- endif %}
 
 {{ meeting.content }}

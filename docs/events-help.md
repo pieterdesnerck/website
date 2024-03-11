@@ -23,5 +23,11 @@ be good candidates for ERA support and promotion the more they fulfill the follo
 * The event is novel, i.e. not a regularly scheduled event
 * Examples of events which the ERA have supported include: The Jubilee Picnic; Eddington Eats; Film Club; Quiz Night; Diwali Celebrations
 
-To discuss how we can help with your idea please get in touch,
-or <a class="btn btn-sm btn-primary" href="https://forms.gle/paW22ugLwrbk4Ccb8" target="_BLANK">Submit your event</a> for promotion
+If you already run an event we can help you promote it on this site,
+via our [newsletter](https://us5.campaign-archive.com/home/?u=77028e27d8594eefd09bbb473&id=4e3157944d)
+and on our
+[social](https://instagram.com/eddington_ra)
+[media](https://x.com/EddingtonRA)
+[accounts](https://m.facebook.com/EddingtonRA).
+
+<a class="btn btn-sm btn-primary" href="https://forms.gle/paW22ugLwrbk4Ccb8" target="_BLANK">Submit your event</a>
