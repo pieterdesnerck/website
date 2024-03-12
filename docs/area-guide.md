@@ -45,6 +45,37 @@ accommodation for mainly postgraduate students remote from the main college site
 
 ## Transport, roads and parking
 
+[Local Bus Services](#buses){:name='buses'}
+in Eddington are provided by Whippet's [Universal bus routes](https://www.whippetbus.co.uk/universal/)
+U1 and U2. These are subsidised by the University for all users regardless of affiliation. Residents
+frequently report delayed and cancelled buses at both peak and non-peak times. Reportedly the
+[offical Whippet app](https://www.whippetbus.co.uk/app/)
+provides more accurate live bus timing information than is displayed on the bus stop screens.
+
+More direct bus routes to the town centre are available at the
+[Madingley Park & Ride](https://cambridgeparkandride.info/madingleyroad-times.shtml) to the south
+and on
+[Huntingdon Road](https://www.google.com/maps/dir/52.2355988,0.0882609/Thornton+Road,+Girton,+Cambridge+CB3+0LG) to the north.
+
+
+[Car Parking](#parking){:name='parking'}
+is available on-street throughout Eddington and normally requires registration during daytime hours.
+Anyone can register to park using the [JustPark app](https://www.justpark.com/) or
+one of the central parking machines. Once you register your visit, the first hour is free and then
+it's roughly £2 per hour thereafter. Maximum parking time limits apply via this method, normally of
+two or four hours. Full information on the [Cashless on-site parking info sheet](https://portal.eddington-cambridge.co.uk/_downloads/Eddington-Parking-Information_202309.pdf) - our location code is 2604.
+
+Residents and their visitors parking in these public spaces can use a separate system to register
+for a 24 period, and for a reduced fee (flat £2.80 at the time of writing).
+[Connect Cashless Parking](https://www.connectcashlessparking.com/) is the provider and they offer
+both phone and app-based payment. A limit of 100 days per year is applied per household to prevent
+a small number of residents from monopolising the limited spaces.
+
+90 minutes of free parking without registration is available for users of Sainsbury's and Argos in
+their underground car park. 18 hours of free parking without registration is available at Madingley
+Park & Ride.
+
+
 ## Water, waste, heating, internet, mobile etc.
 
 <details markdown="1">
