@@ -14,7 +14,7 @@ While the ERA shouldn't be your first port of call in any case, if you have diff
 
 [Portal Estate Management](https://portal.eddington-cambridge.co.uk/customer-service-team/report-a-defect/){:name='portal'}
 is a wrapper-company owned by the University which deals with issues relating to most shared public spaces in Eddington. This includes all roads, pavenments, cycle paths and hard and soft landscaping.
-They are responsible for collecting the [Estate Management Charge](#estate-management-charge) and spending it on local maintenance, improvement and contingency planning. Though they subcontract the billing to [Vital](#vital) and the execution of estate management tasks to [Mears](#mears).
+They are responsible for collecting the [Estate Service Charge](#estate-management-charge) and spending it on local maintenance, improvement and contingency planning. Though they subcontract the billing to [Vital](#vital) and the execution of estate management tasks to [Mears](#mears).
 Portal can sometimes be a useful first contact for services commissioned by other parties below, such as bin collections, playing fields, play parks and questions around covenants.
 
 [Lodge Property Services](https://eddington-cambridge.co.uk/key-worker-housing-frequently-asked-questions){:name='lodge'}
@@ -24,7 +24,7 @@ is a wrapper-company owned by the University which manages tenancy in the Univer
 is a wrapper-company owned by the University responsible for heat network infrastructure in Eddington and the energy centre on Burkitt Lane. Their responsibility ends before the Heat Interface Unit within each property. Consumer billing and much of the network's maintenance is subcontracted to [Vital Energi](#vital).
 
 [Vital Energi](https://www.vitalenergi.co.uk/){:name='vital'}
-provide customer billing services to Portal and Core, for Estate Management Charge and heat usage respectively. They also run our energy centre and maintain our local heat network infrastructure as the current contract holder under Core.
+provide customer billing services to Portal and Core, for Estate Service Charge and heat usage respectively. They also run our energy centre and maintain our local heat network infrastructure as the current contract holder under Core.
 
 [Mears](https://www.mearsgroup.co.uk/){:name='mears'}
 are a national housing services operator. They provide estate management services around Eddington as the current contract holder under Portal. They also do property management for Lodge, and both of these work packages form part of a broader contract with the University outside of Eddington.
@@ -86,13 +86,34 @@ A: Broadband providers must obtain express consent from the customer before rene
 
 ## School, nursery and families
 
+[University of Cambridge Primary School](https://www.universityprimaryschool.org.uk/){:name='primary-school'}
+
+[Bright Horizon's Day Nursery](https://www.brighthorizons.co.uk/our-nurseries/eddington-nursery){:name='nursery'}
+
+[Secondary School](){:name='secondary-school'}
+
+[Teddington Playgroup](){:name='teddington'}
+
 ## Health, fitness and wellbeing
+
+[Doctor's Surgery](){:name='doctor'}
+is provided by [Huntingdon Road Surgery](https://huntingdonroadsurgery.co.uk/) until such time as the local health centre is occupied.
+
+[Sports Fields and Cricket Pitch](){:name='sports'}
+
+[Childrens' Playgrounds](){:name='playgrounds'}
 
 ## Shared spaces and estate management
 
-[Estate Management Charge](){:name='estate-management-charge'}
+[Estate Service Charge](https://portal.eddington-cambridge.co.uk/estate-service-charge/){:name='estate-management-charge'}
 
 ## Local shops, amenities and facilities
+
+[Eddington Square](){:name='square'}
+
+[Hyatt Commercial Units](){:name='hyatt-units'}
+
+[Storey's Field Centre](https://www.storeysfieldcentre.org.uk/){:name='sfc'}
 
 ## Renting in the University's key worker accommodation
 
