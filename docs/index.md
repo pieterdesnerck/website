@@ -37,7 +37,7 @@ The Eddington Residents' Association (ERA) is a volunteer run neighbourhood orga
 
 ![Eddington catchment map](/images/catchment.png)
 
-We cover residents of the North West Cambridge Development bounded by Maddingley Road on the south, Huntingdon Road on the North, the M11 Motorway and Storey's Field to the East.
+We cover residents of the North West Cambridge Development bounded by Madingley Road on the south, Huntingdon Road on the North, the M11 Motorway and Storey's Field to the East.
 
 ## Our aims
 
