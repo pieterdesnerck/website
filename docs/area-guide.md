@@ -65,6 +65,11 @@ both phone and app-based payment. A limit of 100 days per year is applied per ho
 90 minutes of free parking without registration is available for users of Sainsbury's and Argos in their underground car park. 18 hours of free parking without registration is available at Madingley Park & Ride.
 
 
+A [Local Travel Survey](/reports/2023 stakeholders travel survey update.pdf){:name=travel-survey}{:target="_blank"}
+is carried out by the University every year. It surveys residents, workers, shoppers and families with kids at the local school about their use of different modes of transport. This helps to account for the growing and changing transport profile of the area.
+Read the [2023 summary report](/reports/2023 stakeholders travel survey update.pdf){:target="_blank"}
+
+
 ## Water, waste, heating, internet, mobile etc.
 
 <details markdown="1">
