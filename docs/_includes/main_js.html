@@ -78,6 +78,10 @@ function getEventsForPeriod(sheet_data, start_date, end_date){
 }
 
 function makeNewsletterHtml(events, start_date){
+  function fmt(date, options){
+    return date.toLocaleString('default', options)
+  }
+
   var html = `<table id="events_table">\n  <tbody>`
   if(!events.length){
     html += "<tr><td style='padding: 5em 10em; font-style: italic;'>No events found</td></tr></tbody></table>"
@@ -107,18 +111,23 @@ function makeNewsletterHtml(events, start_date){
     time_range = (x) => short_time(x[START_TIME], x[END_TIME]) + "-" + short_time(x[END_TIME]);
     signup_icon = (x) => x[NEEDS_SIGNUP] == "Yes" ? `<span class="signup-required-badge" title="requires signup before you attend">sign</span>` : ""
 
+    our_url = function(date, name){
+      var date_name = fmt(date, {year: "numeric"}) + "-" + fmt(date, {month: "2-digit"}) + "-" + fmt(date, {day: "2-digit"});  // like "2024-03-23"
+      return `https://www.eddingtonra.org/events?name=${name}#${date_name}`
+    }
+
     for(event of day_events){
       let d = event[DATE]
       let dateline = `${d.toLocaleString('default', {weekday: "short"})} ${d.toLocaleString('default', {day: "numeric", })}${date_th(d)} ${d.toLocaleString('default', {month: "long" })} ${time_range(event)} @&nbsp;${event[LOCATION]}`
       let link_text = event[NEEDS_SIGNUP] == "Yes" ? "sign up" : "see details"
-      let link = event[URL].trim() ? `\n<a href="${event[URL]}">${link_text}</a>` : ""
+      let link = `\n<a href="${our_url(d, event[NAME])}">${link_text}</a>`
       features += `<div class="headline-event">\n<div>${dateline}</div>\n<h1>${event[NAME]}</h1>\n<div>${event[DESCRIPTION]}${link}</div>\n</div>\n\n\n`
     }
 
     var events_html = day_events.map(
       (x)=>`<span class="event" title="${x[DESCRIPTION].trim()}">\n`
           +`        ${time_range(x)}\n`
-          +`        <a href="${x[URL]}">${x[NAME]}</a>\n`
+          +`        <a href="${our_url(x[DATE], x[NAME])}">${x[NAME]}</a>\n`
           +`        ${x[LOCATION]}\n`
           +`        ${signup_icon(x)}\n`
           +`        <span class="more-info-badge">info</span>\n`

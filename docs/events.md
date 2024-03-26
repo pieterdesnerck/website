@@ -21,7 +21,7 @@ with funding, volunteers and promotion.
 {% include main_js.html %}
 <style>
   #events_table {
-    margin-bottom: 10lvh;
+    margin-bottom: 20lvh;
   }
   #events_table tbody {
     position: relative;
@@ -89,6 +89,10 @@ function scrollToChosenEvent(){
   }
 }
 
+function fmt(date, options){
+  return date.toLocaleString('default', options)
+}
+
 function makeEventsPageHtml(events, start_date){
   var html = `<table id="events_table">\n  <tbody>`
   if(!events.length){
@@ -103,11 +107,11 @@ function makeEventsPageHtml(events, start_date){
   console.log(`making html for ${events.length} events between ${first_event_date} and ${last_event_date}`);
   for(var date = start_date; date < end_date; date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1)){
     if(prev_date.getMonth() != date.getMonth()){
-      html += `<tr class="month"><th colspan=2 ><h2>${date.toLocaleString('default', { month: 'long' })}</h2></th></tr>\n`;
+      html += `<tr class="month"><th colspan=2 ><h2>${fmt(date, { month: 'long' })}</h2></th></tr>\n`;
     }
     var weekend_class = [0, 6].includes(date.getDay()) ? "weekend" : "";
-    var date_str = date.toLocaleString('default', {weekday: "short"}) + " " + date.toLocaleString('default', {day: "numeric"}) + date_th(date);  // like "Wed 27th"
-    var date_name = date.toLocaleString('default', {month: "short"}) + "-" + date.toLocaleString('default', {day: "numeric"}) + date_th(date);  // like "Mar-31st"
+    var date_str = fmt(date, {weekday: "short"}) + " " + fmt(date, {day: "numeric"}) + date_th(date);  // like "Wed 27th"
+    var date_name = fmt(date, {year: "numeric"}) + "-" + fmt(date, {month: "2-digit"}) + "-" + fmt(date, {day: "2-digit"});  // like "2024-03-23"
     var next_date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
     var day_events = events.filter((x)=>x[DATE] >= date && x[DATE] < next_date)
     day_events.sort((x, y) => x[START_TIME].getTime() - y[START_TIME].getTime());

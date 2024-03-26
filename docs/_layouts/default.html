@@ -100,7 +100,7 @@
       position: relative;
       width: min(900px, calc(100vw - (var(--menu-dim) * 2)));
       z-index: 1;
-      margin: 33vh auto 33vh;
+      margin: 33vh auto 66vh;
       min-height: 100vh;
       background-color: #ffffffaa;
       backdrop-filter: blur(5px);
@@ -237,7 +237,7 @@
         let fadeInBottom = 1 - Math.min(1, (document.documentElement.scrollHeight - window.innerHeight - this.scrollY)/ (window.innerHeight/2));
         let opacity = Math.max(fadeOutTop, fadeInBottom)
         document.getElementById("bg").style.opacity = opacity
-        document.getElementsByTagName("main")[0].classList.toggle("all-white", opacity<=0.1)
+        document.getElementsByTagName("main")[0].classList.toggle("all-white", opacity<=0.01)
       }, false);
 
 
@@ -270,7 +270,7 @@
       <br>
       <br>
     </main>
-    <footer class="row">
+    <footer class="row gx-0">
       {% capture footer_markdown %}{% include footer.md %}{% endcapture %}
       {{ footer_markdown | markdownify }}
     </footer>
