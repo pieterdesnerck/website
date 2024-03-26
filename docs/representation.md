@@ -43,7 +43,7 @@ Previous meetings (minutes are not yet made public):<br/>
   {%- assign day = date|date:"%-d" -%}
   {%- if file %} <a href="{{ file.path|replace_first: "_", "" }}">{%- include date_ordinal.md day=day %}{{- date|date: " %B %Y" -}}</a>,&nbsp;
   {%- else -%}
-  {{ date|date: "%-d %B %Y"  }},
+  {%- include date_ordinal.md day=day %}{{- date|date: " %B %Y" -}},
   {% endif -%}
 {%- endfor %}
 
