@@ -55,6 +55,12 @@ with funding, volunteers and promotion.
   #events_table .day.weekend {
     background-color: rgba(0, 0, 0, 0.05);
   }
+  #events_table .date > a {
+    color: black;
+  }
+  #events_table :target {
+    background-color: #fec;
+  }
 </style>
 <script>
 window.addEventListener("load", (event) => {
@@ -62,8 +68,26 @@ window.addEventListener("load", (event) => {
     var now = new Date();
     var events = getEventsForPeriod(data, now, addMonths(now, 3))
     document.getElementById("events_html").innerHTML = makeEventsPageHtml(events, now);
+    scrollToChosenEvent()
   });
 })
+
+function scrollToChosenEvent(){
+  // if the page has a url fragment, try to scroll to the targeted element
+  // from https://stackoverflow.com/a/74937610
+  let element = document.getElementsByName(location.hash.substring(1))[0];
+  if (element) {
+      // Enable the element state without changing scroll position.
+      let scrollY = window.scrollY;
+      let hash = location.hash;
+      location.hash = '';
+      location.hash = hash;
+      window.scrollTo({top: scrollY});
+
+      // Smooth scroll the element into view.
+      element.scrollIntoView({behavior: 'smooth', block: 'center'});
+  }
+}
 
 function makeEventsPageHtml(events, start_date){
   var html = `<table id="events_table">\n  <tbody>`
@@ -82,7 +106,8 @@ function makeEventsPageHtml(events, start_date){
       html += `<tr class="month"><th colspan=2 ><h2>${date.toLocaleString('default', { month: 'long' })}</h2></th></tr>\n`;
     }
     var weekend_class = [0, 6].includes(date.getDay()) ? "weekend" : "";
-    var date_str = date.toLocaleString('default', {weekday: "short"}) + " " + date.toLocaleString('default', {day: "numeric"}) + date_th(date);
+    var date_str = date.toLocaleString('default', {weekday: "short"}) + " " + date.toLocaleString('default', {day: "numeric"}) + date_th(date);  // like "Wed 27th"
+    var date_name = date.toLocaleString('default', {month: "short"}) + "-" + date.toLocaleString('default', {day: "numeric"}) + date_th(date);  // like "Mar-31st"
     var next_date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
     var day_events = events.filter((x)=>x[DATE] >= date && x[DATE] < next_date)
     day_events.sort((x, y) => x[START_TIME].getTime() - y[START_TIME].getTime());
@@ -106,7 +131,7 @@ function makeEventsPageHtml(events, start_date){
       ).join("\n")
 
     html += `<tr class="day ${weekend_class}">
-    <td class="date">${date_str}</td>
+    <td class="date"><a href="#${date_name}" name="${date_name}">${date_str}</a></td>
     <td class="events">
       ${events_html}
     </td>
