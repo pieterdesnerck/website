@@ -3,9 +3,11 @@
 [Newsletter](/newsletter)<br>
 [Walking Routes](/archive/routes) (archived)
 
-
 </div>
 <div class="col-12 col-md-4" markdown="1">
+
+This site is open source
+[Contribute to this page]({{ site.github.repository_url }}/tree/main/docs/{{ page.path }}){:target=_BLANK}
 
 </div>
 <div class="col-12 col-md-4" markdown="1">

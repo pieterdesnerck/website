@@ -1,7 +1,13 @@
 ---
-title: Area Guide
-permalink: area-guide
+title: Eddington Handbook
+permalink: handbook
+redirect_from:
+  - /area-guide
 ---
+
+<i>
+A guide for residents of Eddington to the many places, processes, practices and policies that are uniquely relevant to this development. This remains a work-in-progress - please [contribute any corrections]({{ site.github.repository_url }}/tree/main/docs/{{ page.path }}){:target=_BLANK}.
+</i>
 
 ## Who does what and how to get help
 
