@@ -19,14 +19,14 @@ and represents Eddington residents in groups and committees locally and city-wid
 ## {{ meeting.organisation }} {{meeting.sort_order}}
 
 Meets {{ meeting.frequency }}
-<span class="separator">|</span> next meeting:
+{%- include separator.md -%} next meeting:
 {% if next_meeting_timestamp > now_timestamp -%}
   {{ meeting.next_date|date: "%A %d %B %Y"}}
 {%- else -%}
   TBD
 {%- endif %}
 {%- if meeting.website -%}
-<span class="separator">|</span>  [organisation website]({{meeting.website}})
+{%- include separator.md -%}  [organisation website]({{meeting.website}})
 {%- endif %}
 
 {{ meeting.content }}

@@ -123,12 +123,14 @@ function makeEventsPageHtml(events, start_date){
       return short_time(x[START_TIME], x[END_TIME]) + "-" + short_time(x[END_TIME]);
     }
     info_link = (x) => x[NEEDS_SIGNUP] == "Yes" ? `sign&nbsp;up` : `details`
+    price = (x) => x[PRICE] == "0" ? `free` : `&pound;${x[PRICE]}`
 
-    let sep = `<span class="separator">|</span>`
+    let sep = `{%- include separator.md -%}`
     var events_html = day_events.map(
       (x)=>`<a href="${x[URL]}">${x[NAME]}</a>\n`
           +` ${sep} ${time_range(x)}\n`
-          +` ${sep} ${x[LOCATION]}\n<br/>\n`
+          +` ${sep} ${x[LOCATION]}\n\n`
+          +` ${sep} ${price(x)}\n<br/>\n`
           +` ${x[DESCRIPTION].trim()}`
           + (x[URL] ? `  <a href="${x[URL]}">${info_link(x)}</a>`:"")
           +`<br><br>\n\n`

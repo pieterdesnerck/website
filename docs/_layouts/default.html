@@ -27,6 +27,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lustria&family=Palanquin+Dark:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+    :root {
+      --menu-dim: 40px;
+      --era-blue: #4caad8;
+      --era-blue-darker: #2479a3;
+    }
       body {
         background-color: white;
         font-family: "Lustria", serif;
@@ -42,10 +47,19 @@
       h1, h2, h3, h4, h5 {
         margin: 1em 0 0.3em;
       }
-
-    :root {
-      --menu-dim: 40px;
-    }
+      a {
+        color: var(--era-blue-darker);
+      }
+      a:hover {
+        color: var(--era-blue);
+      }
+      main .btn-primary {
+        background-color: var(--era-blue);
+        border-width: 0;
+      }
+      main .btn-primary:hover {
+        background-color: var(--era-blue-darker);
+      }
 
     {% assign random_background = site.static_files | where_exp: "x", "x.path contains 'backgrounds/'" | sample %}
     #bg {
@@ -64,7 +78,7 @@
       left: calc(100vw - 2em);
       padding: 0.2em 1em 0.2em 3em;
       color: white;
-      background-color: #4caad8;
+      background-color: var(--era-blue);
       z-index: 3;
       height: 2em;
       overflow: hidden;
@@ -72,6 +86,7 @@
     #bg-attribution:hover {
       left: auto;
       right: 0;
+      background-color: var(--era-blue-darker);
     }
     #bg-attribution:before {
       content: "📷";
@@ -96,11 +111,11 @@
       display: block;
       padding: 0 calc(var(--menu-dim) / 2);
       color: white;
-      background-color: #4caad8;
+      background-color: var(--era-blue);
       margin-bottom: -1px;
     }
     nav > a:hover, #nav-toggle:hover {
-      background-color: #2479a3;
+      background-color: var(--era-blue-darker);
       color: white;
       text-shadow: 0px 4px 8px rgba(0,0,0,0.2)
     }
@@ -133,7 +148,7 @@
       overflow: visible;
     }
     .logo, #nav-toggle {
-      background-color:  #4caad8;
+      background-color:  var(--era-blue);
       backdrop-filter: blur(5px);
       border-radius: 4em;
       box-shadow: 0 0 5px #000000aa;
@@ -180,7 +195,7 @@
 
     main .separator {
       margin: 0 0.5em;
-      color: #4caad8;
+      color: var(--era-blue);
       color: grey;
       opacity: 0.5;
     }

@@ -4,9 +4,9 @@ permalink: agm
 ---
 
 Thursday 11th April 2024
-<span class="separator">|</span>
+{%- include separator.md -%}
 6pm at Storey's Field Centre
-<span class="separator">|</span>
+{%- include separator.md -%}
 immediately following Portal's Residents Forum
 
 Each year we meet to take stock of the previous twelve months and set a course for the year to come. All residents are encouraged to attend, to ask questions about what we do and to find out how to get involved.
@@ -23,7 +23,7 @@ An active and representative residents association can help the University deliv
 - **Bring a neighbour** - not everyone feels confident or welcome to local events. This one really is for everyone who lives here.
 - **Stand for a position** - there's a (pretty undemocratic) election process at the AGM. If you'd like to hold a named position then we would be very happy to [hear from you](/contact-us) in advance.
 - **Ask questions** - in advance, in person or [in writing](/contact-us). As yet another [opaque, local organisation](/handbook#portal) in Eddington we are happy to be quizzed on what we do and why we do it.
-- **Join our [mailing list](/newsletter)** to hear feedback after the meeting, included in the monthly what's on guide.
+- **Join our [newsletter](/newsletter)** to hear feedback after the meeting, included in the monthly what's on guide.
 
 ## If you can't attend
 
