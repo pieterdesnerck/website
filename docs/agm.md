@@ -3,10 +3,27 @@ title: Our Annual General Meeting 2024
 permalink: agm
 ---
 
-Thursday 11th April 2024 <br>
-6pm at Storey's Field Centre <br>
+Thursday 11th April 2024 <span class="separator">|</span>
+6pm at Storey's Field Centre <span class="separator">|</span>
 immediately following Portal's Residents Forum
 
-An active and representative residents association can help the University deliver on the promise of Eddington without compromising the peace and enjoyment of current residents.
+Each year we meet to take stock of the previous twelve months and set a course for the year to come. All residents are encouraged to attend, to ask questions about what we do and to find out how to get involved.
 
-Come to our AGM to support our efforts and get involved in 2024.
+The ERA only exists because a group of residents decided to set it up. It only continues because a handful of local volunteers want to do something for themselves and their neighbours. And it will only endure if Eddington residents give their time to keep the gears turning.
+
+## What you can do
+
+- **Come to the AGM** - it shouldn't take an hour and it
+- **Bring a neighbour** - not everyone feels confident or welcome to local events. This one really is for everyone who lives here.
+- **Stand for a position** - there's a (pretty undemocratic) election process at the AGM. If you'd like to hold a named position then [let us know](/contact-us) in advance.
+- **Ask questions** - in advance, in person or [in writing](/contact-us). As yet another [opaque, local organisation](/handbook#portal) in Eddington we are happy to be quizzed on what we do and why we do it.
+- **Join our [mailing list](/newsletter)** to hear feedback after the meeting, included in the monthly what's on guide.
+
+## If you can't attend
+
+- **Let us know** - not everyone is available for every day and we only do this once each year. [Send us and email](/contact) if you're going to miss out.
+- **Join our [mailing list](/newsletter)** as we'll wrap up the AGM stuff in May's edition.
+
+## Why are we doing this?
+
+An active and representative residents association can help the University deliver on the promise of Eddington without compromising the peace and enjoyment of current residents. We live in a new, wonderful and peculiar place - and one that still has much growing to do. Keeping residents informed about its present and involved in its future is a worthy cause.
