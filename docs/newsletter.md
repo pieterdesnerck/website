@@ -3,8 +3,21 @@ title: Newsletter
 permalink: newsletter
 ---
 
+<div class="row">
+<div class="col-12 col-md-6" markdown="1">
+
 We send an email at the end of each month with some local info and a list of events for the following
 month. You can browse our [archive of newsletter editions](https://us5.campaign-archive.com/home/?u=77028e27d8594eefd09bbb473&id=4e3157944d) to see if it's something you'd like to receive.
+
+</div>
+<div class="col-12 col-md-6">
+
+<iframe class="newsletter-preview" src="https://us5.campaign-archive.com/?u=77028e27d8594eefd09bbb473&id=4860547f1f"></iframe>
+<iframe class="newsletter-preview" src="https://us5.campaign-archive.com/?u=77028e27d8594eefd09bbb473&id=4cc811b708"></iframe>
+<iframe class="newsletter-preview" src="https://us5.campaign-archive.com/?u=77028e27d8594eefd09bbb473&id=a6559bb0a2"></iframe>
+
+</div>
+</div>
 
 ## Sign up
 
@@ -48,3 +61,33 @@ month. You can browse our [archive of newsletter editions](https://us5.campaign-
 </form>
 </div>
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+
+
+<style>
+.newsletter-preview {
+  --scale: 0.2;
+  position: relative;
+  display: inline-block;
+  width: 700px;
+  height: 1200px;
+  margin: 20px -700px -980px 50px;
+  transform: rotate(-5deg) scale(var(--scale));
+  transform-origin: 0 0;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  background-color: white;
+  ppointer-events: none;
+  transition: transform 0.5s ease-out;
+}
+.newsletter-preview:nth-child(2) {
+  --scale:0.21;
+  transform: rotate(0deg) scale(var(--scale))
+}
+.newsletter-preview:nth-child(3) {
+  --scale:0.22;
+  transform: rotate(5deg) scale(var(--scale))
+}
+.newsletter-preview:hover {
+  --scale: 0.23;
+  z-index: 2;
+}
+</style>
