@@ -3,7 +3,7 @@ title: Our Annual General Meeting 2024
 permalink: agm
 ---
 
-Thursday 11th April 2024
+Thursday {% include date_ordinal.md day=11 %} April 2024
 {%- include separator.md -%}
 6pm at Storey's Field Centre
 {%- include separator.md -%}
@@ -21,7 +21,7 @@ An active and representative residents association can help the University deliv
 
 - **Come to the AGM** - it shouldn't take an hour
 - **Bring a neighbour** - not everyone feels confident or welcome to local events. This one really is for everyone who lives here.
-- **Stand for a position** - there's a (pretty undemocratic) election process at the AGM. If you'd like to hold a named position then we would be very happy to [hear from you](/contact-us) in advance.
+- **Stand for a position** - there's a (brief!) election process at the AGM. If you'd like to hold a named position then we would be very happy to [hear from you](/contact-us) in advance.
 - **Ask questions** - in advance, in person or [in writing](/contact-us). As yet another [opaque, local organisation](/handbook#portal) in Eddington we are happy to be quizzed on what we do and why we do it.
 - **Join our [newsletter](/newsletter)** to hear feedback after the meeting, included in the monthly what's on guide.
 

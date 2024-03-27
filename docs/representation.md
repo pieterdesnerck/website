@@ -18,7 +18,12 @@ and represents Eddington residents in groups and committees locally and city-wid
 
 ## {{ meeting.organisation }} {{meeting.sort_order}}
 
+{% if meeting.frequency -%}
 Meets {{ meeting.frequency }}
+{%- else -%}
+Inactive
+{%- endif %}
+
 {%- include separator.md -%} next meeting:
 {% if next_meeting_timestamp > now_timestamp -%}
   {{ meeting.next_date|date: "%A %d %B %Y"}}

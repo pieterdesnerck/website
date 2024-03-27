@@ -24,5 +24,5 @@ prev_dates:
   - 2020-06-09
   - 2020-03-10
 ---
-We meet with members of Portal's team to discuss operational stuff. We bring up common or
+We meet with members of Portal's team to discuss operational matters. We bring up common or
 long-standing issues and ask for timely solutions.
