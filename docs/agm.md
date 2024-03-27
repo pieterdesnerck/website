@@ -13,16 +13,16 @@ The ERA only exists because a group of residents decided to set it up. It only c
 
 ## What you can do
 
-- **Come to the AGM** - it shouldn't take an hour and it
+- **Come to the AGM** - it shouldn't take an hour
 - **Bring a neighbour** - not everyone feels confident or welcome to local events. This one really is for everyone who lives here.
-- **Stand for a position** - there's a (pretty undemocratic) election process at the AGM. If you'd like to hold a named position then [let us know](/contact-us) in advance.
+- **Stand for a position** - there's a (pretty undemocratic) election process at the AGM. If you'd like to hold a named position then we would be very happy to [hear from you](/contact-us) in advance.
 - **Ask questions** - in advance, in person or [in writing](/contact-us). As yet another [opaque, local organisation](/handbook#portal) in Eddington we are happy to be quizzed on what we do and why we do it.
 - **Join our [mailing list](/newsletter)** to hear feedback after the meeting, included in the monthly what's on guide.
 
 ## If you can't attend
 
-- **Let us know** - not everyone is available for every day and we only do this once each year. [Send us and email](/contact) if you're going to miss out.
-- **Join our [mailing list](/newsletter)** as we'll wrap up the AGM stuff in May's edition.
+- **Let us know** - not everyone is available on a given day and we only do this once each year. [Send us and email](/contact) if you're going to miss out and we'll keep you in the loop.
+- **Join our [newsletter](/newsletter)** as we'll wrap up the AGM stuff in May's edition.
 
 ## Why are we doing this?
 

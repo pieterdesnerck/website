@@ -4,7 +4,7 @@ permalink: newsletter
 ---
 
 <div class="row">
-<div class="col-12 col-md-6" markdown="1">
+<div class="col-12 col-md-6 mb-5" markdown="1">
 
 We send an email at the end of each month with some local info and a list of events for the following
 month. You can browse our [archive of newsletter editions](https://us5.campaign-archive.com/home/?u=77028e27d8594eefd09bbb473&id=4e3157944d) to see if it's something you'd like to receive.
@@ -18,6 +18,7 @@ month. You can browse our [archive of newsletter editions](https://us5.campaign-
 
 </div>
 </div>
+
 
 ## Sign up
 
@@ -65,12 +66,12 @@ month. You can browse our [archive of newsletter editions](https://us5.campaign-
 
 <style>
 .newsletter-preview {
-  --scale: 0.2;
+  --scale: 0.22;
   position: relative;
   display: inline-block;
   width: 700px;
   height: 1200px;
-  margin: 20px -700px -980px 50px;
+  margin: -40px -700px -980px 50px;
   transform: rotate(-5deg) scale(var(--scale));
   transform-origin: 0 0;
   box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
@@ -79,15 +80,15 @@ month. You can browse our [archive of newsletter editions](https://us5.campaign-
   transition: transform 0.5s ease-out;
 }
 .newsletter-preview:nth-child(2) {
-  --scale:0.21;
+  --scale:0.23;
   transform: rotate(0deg) scale(var(--scale))
 }
 .newsletter-preview:nth-child(3) {
-  --scale:0.22;
+  --scale:0.24;
   transform: rotate(5deg) scale(var(--scale))
 }
 .newsletter-preview:hover {
-  --scale: 0.23;
+  --scale: 0.25;
   z-index: 2;
 }
 </style>
