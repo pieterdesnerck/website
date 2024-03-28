@@ -200,6 +200,23 @@
       opacity: 0.5;
     }
 
+    details {
+      border-left: 0.3em solid rgba(0,0,0,0);
+      padding-left: 1em;
+      margin-bottom: 1em;
+    }
+    details[open] {
+      border-color: rgba(0,0,0,0.1);
+    }
+    details summary {
+      cursor: pointer;
+    }
+    details summary::marker {
+      color: var(--era-blue);
+    }
+    details[open] summary {
+      margin-bottom: 0.5em;
+    }
 
     .committee-images > div {
       display: inline-block;
@@ -293,7 +310,7 @@
       <a href="/handbook">handbook</a>
     </nav>
     <a class="logo" href="/"><img src="/images/logo.svg" /></a>
-    <main class="">
+    <main class="{{ page.url }}">
       <h1>{{ page.title }}</h1>
       {{ content }}
       <br>

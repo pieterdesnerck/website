@@ -13,10 +13,10 @@ A guide for residents of Eddington to the many places, processes, practices and 
 
 There is a jumble of organisations each taking responsibility for some parts of Eddington. This can make it tricky for residents to get the help they need - particularly for those new to the area, city or country.
 
-While the ERA shouldn't be your first port of call in any case, if you have difficulty getting a satisfactory response from any of the contacts below please [let us know](/contact-us). Likewise, if you have a local issue that isn't clearly the responsibility of one of the below, [get in touch](/contact-us).
+While the ERA is unlikely to be the best first port of call, if you have difficulty getting a satisfactory response from any of the contacts below please [let us know](/contact-us). Likewise, if you have a local issue that isn't clearly the responsibility of one of the below, [get in touch](/contact-us).
 
 <details markdown="1">
-<summary>see the list</summary>
+<summary>See details of our many providers</summary>
 
 [Portal Estate Management](https://portal.eddington-cambridge.co.uk/customer-service-team/report-a-defect/){:name='portal'}
 is a wrapper-company owned by the University which deals with issues relating to most shared public spaces in Eddington. This includes all roads, pavenments, cycle paths and hard and soft landscaping.
@@ -57,41 +57,37 @@ are a uniquely complicated aspect of Eddington, sitting as we do across the city
 ## Transport, roads and parking
 
 [Local Bus Services](#buses){:name='buses'}
-in Eddington are provided by Whippet's [Universal bus routes](https://www.whippetbus.co.uk/universal/) U1 and U2. These are subsidised by the University for all users regardless of affiliation. Residents frequently report delayed and cancelled buses at both peak and non-peak times. Reportedly the [offical Whippet app](https://www.whippetbus.co.uk/app/) provides more accurate live bus timing information than is displayed on the bus stop screens.
-
-More direct bus routes to the town centre are available at the [Madingley Park & Ride](https://cambridgeparkandride.info/madingleyroad-times.shtml) to the south and on [Huntingdon Road](https://www.google.com/maps/dir/52.2355988,0.0882609/Thornton+Road,+Girton,+Cambridge+CB3+0LG) to the north.
-
+in Eddington are provided by Whippet's [Universal bus routes](https://www.whippetbus.co.uk/universal/) U1 and U2. These are subsidised by the University for all users regardless of affiliation. Residents frequently report delayed and cancelled buses at both peak and non-peak times. Reportedly the [offical Whippet app](https://www.whippetbus.co.uk/app/) provides more accurate live bus timing information than is displayed on the bus stop screens. More direct bus routes to the town centre are available at the [Madingley Park & Ride](https://cambridgeparkandride.info/madingleyroad-times.shtml) to the south and on [Huntingdon Road](https://www.google.com/maps/dir/52.2355988,0.0882609/Thornton+Road,+Girton,+Cambridge+CB3+0LG) to the north.
 
 [Car Parking](#parking){:name='parking'}
-is available on-street throughout Eddington and normally requires registration during daytime hours. Anyone can register to park using the [JustPark app](https://www.justpark.com/) or one of the central parking machines. Once you register your visit, the first hour is free and then it's roughly £2 per hour thereafter. Maximum parking time limits apply via this method, normally of two or four hours. Full information on the [Cashless on-site parking info sheet](https://portal.eddington-cambridge.co.uk/_downloads/Eddington-Parking-Information_202309.pdf) - our location code is 2604.
+is available on-street throughout Eddington and normally requires registration during daytime hours. The spaces are for public use but residents and their visitors can access a lower rate and longer stays. Free parking is available in a few places, each with some restriction (see details)
+
+<details markdown="1">
+<summary>See options for how and where to park</summary>
+
+Anyone can register to park using the [JustPark app](https://www.justpark.com/) or one of the central parking machines. Once you register your visit, the first hour is free and then it's roughly £2 per hour thereafter. Maximum parking time limits apply via this method, normally of two or four hours. Full information on the [Cashless on-site parking info sheet](https://portal.eddington-cambridge.co.uk/_downloads/Eddington-Parking-Information_202309.pdf) - our location code is 2604.
 
 Residents and their visitors parking in these public spaces can use a separate system to register for a 24 period, and for a reduced fee (flat £2.80 at the time of writing). [Connect Cashless Parking](https://www.connectcashlessparking.com/) is the provider and they offer
 both phone and app-based payment. A limit of 100 days per year is applied per household to prevent a small number of residents from monopolising the limited spaces.
 
 90 minutes of free parking without registration is available for users of Sainsbury's and Argos in their underground car park. 18 hours of free parking without registration is available at Madingley Park & Ride.
 
+</details>
 
-A [Local Travel Survey](/reports/2023 stakeholders travel survey update.pdf){:name=travel-survey}{:target="_blank"}
+[A Local Travel Survey](/reports/2023 stakeholders travel survey update.pdf){:name=travel-survey}{:target="_blank"}
 is carried out by the University every year. It surveys residents, workers, shoppers and families with kids at the local school about their use of different modes of transport. This helps to account for the growing and changing transport profile of the area.
 Read the [2023 summary report](/reports/2023 stakeholders travel survey update.pdf){:target="_blank"}
 
 
 ## Water, waste, heating, internet, mobile etc.
 
-<details markdown="1">
-<summary>see local services list</summary>
-
 [Broadband Internet](#internet){:name='internet'}
+can be provided by [many providers](https://www.openreach.com/fibre-broadband/fttp-providers) on the Open Reach fibre network. Many properties also have fibre connections to [Virgin Media](https://www.virginmedia.com/broadband). [Eduroam](https://help.uis.cam.ac.uk/service/wifi/connect-to-eduroam) is available in some central areas but not within every building.
 
-High speed Internet is important for resident's, especially as we carry out more work from home and have to share the same optical fibre or cable with television. We have heard a number issues and questions related to Internet provision at Eddington.
+<details markdown="1">
+<summary>See advice for short-term contracts and renewal</summary>
 
-Q: I only have a 12 month fixed tenancy and/or a fixed term contract of employment dependant on research funding. I can only find 18 and 24 month Internet service contracts. Are there alternatives?
-
-A: From 26 May 2011, as result of EU telecoms law changes, the tie-in period for new phone or broadband contracts will be limited to a maximum of 24 months. Consumers [must also be offered a choice](https://web.archive.org/web/20110704193402/http://consumers.ofcom.org.uk/2011/05/uk-consumers-benefit-from-european-telecoms-law-changes/) of contract lasting no longer than 12 months, although in practice these deals can be hard to find. We would recommend residents push providers to provide details of 12 month deals where they feel uncomfortable to enter into longer contracts.
-
-Q: I allowed my discounted initial term to automatically renew. Now I find I am tied in to another 18 month term. What can I do?
-
-A: Broadband providers must obtain express consent from the customer before renewing a fixed commitment period. Check to see whether this was given. Express consent is a requirement of [Ofcom's General Conditions](https://www.ofcom.org.uk/__data/assets/pdf_file/0016/112282/guidance-under-general-conditions-c1-contract-requirements.pdf#page=5) to which all UK broadband service providers must comply.
+Residents on 12-month tenancies have reported difficulty finding ISPs offering contracts of less than 18 months. EU law requires [consumers be offered the option](https://web.archive.org/web/20110704193402/http://consumers.ofcom.org.uk/2011/05/uk-consumers-benefit-from-european-telecoms-law-changes/) of contract lasting no longer than 12 months, although some providers make these hard to find. Renewal of internet contracts is governed by [Ofcom's General Conditions](https://www.ofcom.org.uk/__data/assets/pdf_file/0016/112282/guidance-under-general-conditions-c1-contract-requirements.pdf#page=5) which means ISPs have to get the customer's consent before renewing a fixed commitment period.
 
 </details>
 
@@ -107,8 +103,14 @@ A: Broadband providers must obtain express consent from the customer before rene
 
 ## Health, fitness and wellbeing
 
-[Doctor's Surgery](){:name='doctor'}
-is provided by [Huntingdon Road Surgery](https://huntingdonroadsurgery.co.uk/) until such time as the local health centre is occupied.
+[Our Local Doctor's Surgery](#doctor){:name='doctor'}
+is [Huntingdon Road Surgery](https://huntingdonroadsurgery.co.uk/) until such time as the [health centre](#health-centre) is occupied. It also has a [satellite surgery](https://www.nhs.uk/services/gp-surgery/girton-branch-surgery/D81002001) in Girton.
+
+[No Pharmacy](#pharmacy){:name='pharmacy'}
+exists in Eddington, nor can residents use the [dispensary in Girton](https://www.huntingdonroadsurgery.co.uk/girton-dispensary) run by Huntingdon Road Surgery. The nearest pharmacy is on [Histon Road](https://rowlandspharmacy.co.uk/). Plans for a local pharmacy seem contingent on there being a doctor's surgery here first, at which point Sainsbury's have indicated they may add one in-store.
+
+[The Health Centre](#heath-centre){:name='health-centre'}
+is at at the south end of Eddington Avenue ([map](https://www.google.com/maps/@52.2170912,0.0882417,3a,42.9y,275.96h,96.26t/data=!3m6!1e1!3m4!1s3aYXVcbz4yZbBBHY_OlrTQ!2e0!7i16384!8i8192?entry=ttu)), near Sainsbury's car park entrance. The unit is empty and its interior unfinished. Negotiations with the NHS to find an occupant have been very slow. In early 2024 Portal said a proposal was being considered for a multi-use health facility - which means not exclusively a doctor's office but with GP provision among other health services. The proposal targeted an opening in mid 2025, we are told.
 
 [Sports Fields and Cricket Pitch](){:name='sports'}
 

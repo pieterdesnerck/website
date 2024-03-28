@@ -11,7 +11,7 @@ and represents Eddington residents in groups and committees locally and city-wid
 
 {% for meeting in meetings %}
 {% assign collection = site.collections | where: "label", "meetings" | first %}
-{% assign next_meeting_timestamp = meeting.next_date|date:"%s"|plus:0 %}
+{% assign next_meeting_timestamp = meeting.next_date|first|date:"%s"|plus:0 %}
 {% assign minutes_prefix = "/minutes/" | append:meeting.minutes_dir | append:"/" %}
 {% assign file_path_filter = "file.path contains '" | append:minutes_prefix | append:"'" %}
 {% assign minutes = collection.files | where_exp:"file", file_path_filter %}

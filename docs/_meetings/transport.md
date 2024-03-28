@@ -1,11 +1,12 @@
 ---
-organisation: Eddington Transport Stakeholder Group
+organisation: Transport Stakeholder Group
 minutes_dir: transport
 date: 2050-01-02  # hack for sort order until Jekyll v4
 frequency: quarterly
 is_public_minutes: false
 website:
 next_date:
+  - 2024-05-09
 prev_dates:
   - 2023-05-18
   - 2023-02-09

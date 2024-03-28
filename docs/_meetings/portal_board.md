@@ -7,6 +7,7 @@ is_public_minutes: false
 website: https://find-and-update.company-information.service.gov.uk/company/10638887/officers
 next_date:
 prev_dates:
+  - 2023-12-04
   - 2023-01-23
 
 ---
