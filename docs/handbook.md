@@ -16,7 +16,7 @@ There is a jumble of organisations each taking responsibility for some parts of 
 While the ERA is unlikely to be the best first port of call, if you have difficulty getting a satisfactory response from any of the contacts below please [let us know](/contact-us). Likewise, if you have a local issue that isn't clearly the responsibility of one of the below, [get in touch](/contact-us).
 
 <details markdown="1">
-<summary>See details of our many providers</summary>
+<summary>See details of our many providers and for what each is responsible</summary>
 
 [Portal Estate Management](https://portal.eddington-cambridge.co.uk/customer-service-team/report-a-defect/){:name='portal'}
 is a wrapper-company owned by the University which deals with issues relating to most shared public spaces in Eddington. This includes all roads, pavenments, cycle paths and hard and soft landscaping.
@@ -65,10 +65,10 @@ is available on-street throughout Eddington and normally requires registration d
 <details markdown="1">
 <summary>See options for how and where to park</summary>
 
-Anyone can register to park using the [JustPark app](https://www.justpark.com/) or one of the central parking machines. Once you register your visit, the first hour is free and then it's roughly £2 per hour thereafter. Maximum parking time limits apply via this method, normally of two or four hours. Full information on the [Cashless on-site parking info sheet](https://portal.eddington-cambridge.co.uk/_downloads/Eddington-Parking-Information_202309.pdf) - our location code is 2604.
+Anyone can register their car using the [JustPark app](https://www.justpark.com/) or one of the central parking machines. Once you register your visit, the first hour is free and then it's roughly £2 per hour thereafter. Maximum parking time limits apply via this method, normally of two or four hours. Full information on the [Cashless on-site parking info sheet](https://portal.eddington-cambridge.co.uk/_downloads/Eddington-Parking-Information_202309.pdf).
 
 Residents and their visitors parking in these public spaces can use a separate system to register for a 24 period, and for a reduced fee (flat £2.80 at the time of writing). [Connect Cashless Parking](https://www.connectcashlessparking.com/) is the provider and they offer
-both phone and app-based payment. A limit of 100 days per year is applied per household to prevent a small number of residents from monopolising the limited spaces.
+both phone and app-based payment, location code 2604. A limit of 100 days per year is applied per household to prevent a small number of residents from monopolising the limited spaces.
 
 90 minutes of free parking without registration is available for users of Sainsbury's and Argos in their underground car park. 18 hours of free parking without registration is available at Madingley Park & Ride.
 
@@ -81,8 +81,23 @@ Read the [2023 summary report](/reports/2023 stakeholders travel survey update.p
 
 ## Water, waste, heating, internet, mobile etc.
 
-[Broadband Internet](#internet){:name='internet'}
-can be provided by [many providers](https://www.openreach.com/fibre-broadband/fttp-providers) on the Open Reach fibre network. Many properties also have fibre connections to [Virgin Media](https://www.virginmedia.com/broadband). [Eduroam](https://help.uis.cam.ac.uk/service/wifi/connect-to-eduroam) is available in some central areas but not within every building.
+[A Heat Network](#heat-network){:name='heat-network'}
+provides hot water to most properties in Eddington for both space heating and water heating. The distributing network itself is a closed system of pipes connecting an HIU in each building to the Energy Centre on Burkitt Lane. It is managed by [Core](#core) with maintenance and billing provided by [Vital Energi](#vital).
+The system is powered by commercial gas boilers after the original plan to run a [combined heat and power](https://www.gov.uk/guidance/combined-heat-and-power) plant proved infeasible. A more sustainable approach is desired by the University but has not yet been identified.
+
+<details markdown="1">
+<summary>See details of network design, resident responsibilities and heat pricing</summary>
+
+The distribution network is a series of insulated, underground pipes which carry water at around 90°C. The circuit is closed: heat exchangers in the each property's HIU raise the temperature of either their incoming fresh water or separately sealed underfloor circuits as needed. All water pumped out of the Energy Centre ultimately returns there - it does not come out of residents' taps nor does it flow through their underfloor heating circuits.
+
+Core's equipment stops at the heat network pipes that enter each building. Homeowners are responsible for their HIU, which they own. The standing charge includes a two-yearly service from Core (for which access must be allowed). Underfloor heating and other domestic plumbing is also beyond the scope of Core's responsibilities.
+
+Usage is charged for based on the difference in temperature between incoming and outgoing network water. As of early 2024, heat network billing is not covered by energy price caps though this effect is offset by the commercial gas purchasing policy of the University, which acts to hold input costs relatively stable.
+
+</details>
+
+[Internet Connectivity](#internet){:name='internet'}
+is available [many providers](https://www.openreach.com/fibre-broadband/fttp-providers) on the Open Reach fibre network. Many properties also have fibre connections to [Virgin Media](https://www.virginmedia.com/broadband). [Eduroam](https://help.uis.cam.ac.uk/service/wifi/connect-to-eduroam) is available in some central areas but not within every building.
 
 <details markdown="1">
 <summary>See advice for short-term contracts and renewal</summary>
@@ -135,3 +150,6 @@ is at at the south end of Eddington Avenue ([map](https://www.google.com/maps/@5
 ## Councils and democratic representation
 
 ## Development, growth and future plans
+
+
+*[HIU]: Heat Interface Unit
