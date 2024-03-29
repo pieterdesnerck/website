@@ -33,7 +33,7 @@ Want to stay up to date with community events and developments in our neighbourh
 [Subscribe to the ERA monthly newsletter](https://mailchi.mp/4f5aeb4b817a/eddingtonra){: class="btn btn-primary"}
 
 ## We are your neighbours
-The Eddington Residents' Association (ERA) is a volunteer run neighbourhood organisation made up of local residents, who strive to build a vibrant, welcoming and connected community. ERA is run by a committee set up in September 2019, when volunteers of the local Eddington Open Door, Eddington Eats and the Eddington Film Club initiatives joined together under one umbrella.
+The Eddington Residents Association (ERA) is a volunteer run neighbourhood organisation made up of local residents, who strive to build a vibrant, welcoming and connected community. ERA is run by a committee set up in September 2019, when volunteers of the local Eddington Open Door, Eddington Eats and the Eddington Film Club initiatives joined together under one umbrella.
 
 ![Eddington catchment map](/images/catchment.png)
 
