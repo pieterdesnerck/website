@@ -19,7 +19,7 @@ While the ERA is unlikely to be the best first port of call, if you have difficu
 <summary>See details of our many providers and for what each is responsible</summary>
 
 [Portal Estate Management](https://portal.eddington-cambridge.co.uk/customer-service-team/report-a-defect/){:name='portal'}
-is a wrapper-company owned by the University which deals with issues relating to most shared public spaces in Eddington. This includes all roads, pavenments, cycle paths and hard and soft landscaping.
+is a wrapper-company owned by the University which deals with issues relating to most shared public spaces in Eddington. This includes all roads, pavements, cycle paths and hard and soft landscaping.
 They are responsible for collecting the [Estate Service Charge](#estate-management-charge) and spending it on local maintenance, improvement and contingency planning. Though they subcontract the billing to [Vital](#vital) and the execution of estate management tasks to [Mears](#mears).
 Portal can sometimes be a useful first contact for services commissioned by other parties below, such as bin collections, playing fields, play parks and questions around covenants.
 
@@ -57,7 +57,7 @@ are a uniquely complicated aspect of Eddington, sitting as we do across the city
 ## Transport, roads and parking
 
 [Local Bus Services](#buses){:name='buses'}
-in Eddington are provided by Whippet's [Universal bus routes](https://www.whippetbus.co.uk/universal/) U1 and U2. These are subsidised by the University for all users regardless of affiliation. Residents frequently report delayed and cancelled buses at both peak and non-peak times. Reportedly the [offical Whippet app](https://www.whippetbus.co.uk/app/) provides more accurate live bus timing information than is displayed on the bus stop screens. More direct bus routes to the town centre are available at the [Madingley Park & Ride](https://cambridgeparkandride.info/madingleyroad-times.shtml) to the south and on [Huntingdon Road](https://www.google.com/maps/dir/52.2355988,0.0882609/Thornton+Road,+Girton,+Cambridge+CB3+0LG) to the north.
+in Eddington are provided by Whippet's [Universal bus routes](https://www.whippetbus.co.uk/universal/) U1 and U2. These are subsidised by the University for all users regardless of affiliation. Residents frequently report delayed and cancelled buses at both peak and non-peak times. Reportedly the [official Whippet app](https://www.whippetbus.co.uk/app/) provides more accurate live bus timing information than is displayed on the bus stop screens. More direct bus routes to the town centre are available at the [Madingley Park & Ride](https://cambridgeparkandride.info/madingleyroad-times.shtml) to the south and on [Huntingdon Road](https://www.google.com/maps/dir/52.2355988,0.0882609/Thornton+Road,+Girton,+Cambridge+CB3+0LG) to the north.
 
 [Car Parking](#parking){:name='parking'}
 is available on-street throughout Eddington and normally requires registration during daytime hours. The spaces are for public use but residents and their visitors can access a lower rate and longer stays. Free parking is available in a few places, each with some restriction (see details)
@@ -88,7 +88,7 @@ The system is powered by commercial gas boilers after the original plan to run a
 <details markdown="1">
 <summary>See details of network design, resident responsibilities and heat pricing</summary>
 
-The distribution network is a series of insulated, underground pipes which carry water at around 90°C. The circuit is closed: heat exchangers in the each property's HIU raise the temperature of either their incoming fresh water or separately sealed underfloor circuits as needed. All water pumped out of the Energy Centre ultimately returns there - it does not come out of residents' taps nor does it flow through their underfloor heating circuits.
+The distribution network is a series of insulated, underground pipes which carry water at around 90°C. The circuit is closed: heat exchangers in each property's HIU raise the temperature of either their incoming fresh water or separately sealed underfloor circuits as needed. All water pumped out of the Energy Centre ultimately returns there - it does not come out of residents' taps nor does it flow through their underfloor heating circuits.
 
 Core's equipment stops at the heat network pipes that enter each building. Homeowners are responsible for their HIU, which they own. The standing charge includes a two-yearly service from Core (for which access must be allowed). Underfloor heating and other domestic plumbing is also beyond the scope of Core's responsibilities.
 
@@ -97,7 +97,7 @@ Usage is charged for based on the difference in temperature between incoming and
 </details>
 
 [Internet Connectivity](#internet){:name='internet'}
-is available [many providers](https://www.openreach.com/fibre-broadband/fttp-providers) on the Open Reach fibre network. Many properties also have fibre connections to [Virgin Media](https://www.virginmedia.com/broadband). [Eduroam](https://help.uis.cam.ac.uk/service/wifi/connect-to-eduroam) is available in some central areas but not within every building.
+is available [many providers](https://www.openreach.com/fibre-broadband/fttp-providers) on the OpenReach fibre network. Many properties also have fibre connections to [Virgin Media](https://www.virginmedia.com/broadband). [Eduroam](https://help.uis.cam.ac.uk/service/wifi/connect-to-eduroam) is available in some central areas but not within every building.
 
 <details markdown="1">
 <summary>See advice for short-term contracts and renewal</summary>
@@ -110,7 +110,7 @@ Residents on 12-month tenancies have reported difficulty finding ISPs offering c
 
 [University of Cambridge Primary School](https://www.universityprimaryschool.org.uk/){:name='primary-school'}
 
-[Bright Horizon's Day Nursery](https://www.brighthorizons.co.uk/our-nurseries/eddington-nursery){:name='nursery'}
+[Bright Horizons Day Nursery](https://www.brighthorizons.co.uk/our-nurseries/eddington-nursery){:name='nursery'}
 
 [Secondary School](){:name='secondary-school'}
 
