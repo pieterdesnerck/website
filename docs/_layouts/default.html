@@ -117,14 +117,14 @@
       align-items: flex-start;
       z-index: 3;
     }
-    nav > a, #nav-toggle {
+    nav > a, #nav-show {
       display: block;
       padding: 0 calc(var(--menu-dim) / 2);
       color: white;
       background-color: var(--era-blue);
-      margin-bottom: -1px;
+      margin-bottom: -0.5px;
     }
-    nav > a:hover, #nav-toggle:hover {
+    nav > a:hover, #nav-show:hover {
       background-color: var(--era-blue-darker);
       color: white;
       text-shadow: 0px 4px 8px rgba(0,0,0,0.2)
@@ -157,7 +157,7 @@
       height: 8em;
       overflow: visible;
     }
-    .logo, #nav-toggle {
+    .logo, #nav-show {
       background-color:  var(--era-blue);
       backdrop-filter: blur(5px);
       border-radius: 4em;
@@ -165,7 +165,7 @@
       transition: all .1s ease-in;
       z-index: 2;
     }
-    .logo:hover, #nav-toggle:hover {
+    .logo:hover, #nav-show:hover {
       box-shadow: 0 0 8px #000000dd;
       transform: scale(105%, 105%);
       transform-origin: 50% 50%;
@@ -263,7 +263,7 @@
     .developer-only { display: none;}
     body.developer-mode .developer-only { display: initial;}
 
-    #nav-toggle { display: none;}
+    #nav-show, #nav-hide { display: none;}
     @media (max-width: 1200px) {
       /* hide menu on smaller screen sizes where it would clash with main */
       nav {
@@ -274,7 +274,7 @@
       #nav-toggle-input:checked + nav {
         top: 0vh;
       }
-      #nav-toggle {
+      #nav-show {
         display: block;
         position: fixed;
         top: calc(var(--menu-dim) * 0.2);
@@ -284,9 +284,17 @@
         padding: calc(var(--menu-dim) * 2) auto 0;
         text-align: center;
         overflow: hidden;
-        font-size: calc(var(--menu-dim) - 2px);
+        font-size: calc(var(--menu-dim));
         cursor: pointer;
         z-index: 3;
+      }
+      #nav-hide {
+        display: block;
+        font-size: 50%;
+        color: white;
+        height: auto;
+        background-color: var(--era-blue-darker);
+        cursor: pointer;
       }
       details[open] {
         margin-left: -1em;
@@ -325,12 +333,13 @@
   <body>
     <div id="bg"></div>
     <div id="bg-attribution">{{ random_background.basename }}</div>
-    <label id="nav-toggle" for="nav-toggle-input">☰</label>
+    <label id="nav-show" for="nav-toggle-input">☰</label>
     <input id="nav-toggle-input" type="checkbox" class="d-none" />
     <nav>
       <a href="/events">events</a>
       <a href="/representation">representation</a>
       <a href="/handbook">handbook</a>
+      <a id="nav-hide"><label for="nav-toggle-input">hide menu</label></a>
     </nav>
     <a class="logo" href="/"><img src="/images/logo.svg" /></a>
     <main class="{{ page.url }}">
