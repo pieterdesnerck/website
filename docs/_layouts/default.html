@@ -13,10 +13,20 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCE0WFJYC0"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RCE0WFJYC0');
+      developer_mode = false
+      const params = new URLSearchParams(window.location.search);
+      if(params.has("developer_mode")){
+        let is_developer = parseInt(params.get("developer_mode") ?? "0")
+        localStorage.setItem("developer_mode", is_developer)
+      }
+      if(parseInt(localStorage.getItem("developer_mode")) ?? 0){
+        developer_mode = true
+      }else{
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RCE0WFJYC0');
+      }
     </script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -250,6 +260,9 @@
       font-size: 0.7em;
     }
 
+    .developer-only { display: none;}
+    body.developer-mode .developer-only { display: initial;}
+
     #nav-toggle { display: none;}
     @media (max-width: 1200px) {
       /* hide menu on smaller screen sizes where it would clash with main */
@@ -275,6 +288,12 @@
         cursor: pointer;
         z-index: 3;
       }
+      details[open] {
+        margin-left: -1em;
+      }
+      details[open] summary {
+        margin-left: 1em;
+      }
     }
 
     </style>
@@ -289,6 +308,10 @@
 
 
       document.addEventListener("DOMContentLoaded", function(){
+        if(developer_mode){
+          document.getElementsByTagName("body")[0].classList.add("developer-mode")
+        }
+
         const el = document.querySelector(".logo")
         const observer = new IntersectionObserver(
           ([e]) => e.target.classList.toggle("hits-top", e.intersectionRatio < 1),

@@ -12,6 +12,10 @@
 This site is open source
 [Contribute to this page]({{ site.github.repository_url }}/tree/main/docs/{{ page.path }}){:target="_blank"}
 
+You are identified as a [developer](?developer_mode=1) so can see things like the
+[newsletter generator](/newsletter/generator)
+{: .developer-only}
+
 </div>
 <div class="col-12 col-md-4" markdown="1">
 

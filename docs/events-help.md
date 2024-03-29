@@ -32,4 +32,4 @@ and on our
 [media](https://x.com/EddingtonRA)
 [accounts](https://m.facebook.com/EddingtonRA).
 
-<a class="btn btn-sm btn-primary" href="https://forms.gle/paW22ugLwrbk4Ccb8" target="_BLANK">Submit your event</a>
+<a class="btn btn-primary fs-3" href="https://forms.gle/paW22ugLwrbk4Ccb8" target="_BLANK">Submit your event</a>

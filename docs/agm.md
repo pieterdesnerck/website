@@ -27,5 +27,5 @@ An active and representative residents association can help the University deliv
 
 ## If you can't attend
 
-- **Let us know** - not everyone is available on a given day and we only do this once each year. [Send us and email](/contact) if you're going to miss out and we'll keep you in the loop.
+- **Let us know** - not everyone is available on a given day and we only do this once each year. [Send us an email](/contact) if you're going to miss out and we'll keep you in the loop.
 - **Join our [newsletter](/newsletter)** - we'll wrap up the AGM stuff in May's edition.

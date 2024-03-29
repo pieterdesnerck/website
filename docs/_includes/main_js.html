@@ -120,7 +120,7 @@ function makeNewsletterHtml(events, start_date){
       let d = event[DATE]
       let dateline = `${d.toLocaleString('default', {weekday: "short"})} ${d.toLocaleString('default', {day: "numeric", })}${date_th(d)} ${d.toLocaleString('default', {month: "long" })} ${time_range(event)} @&nbsp;${event[LOCATION]}`
       let link_text = event[NEEDS_SIGNUP] == "Yes" ? "sign up" : "see details"
-      let link = `\n<a href="${our_url(d, event[NAME])}">${link_text}</a>`
+      let link = `\n<a href="${event[URL]}">${link_text}</a>`
       features += `<div class="headline-event">\n<div>${dateline}</div>\n<h1>${event[NAME]}</h1>\n<div>${event[DESCRIPTION]}${link}</div>\n</div>\n\n\n`
     }
 
