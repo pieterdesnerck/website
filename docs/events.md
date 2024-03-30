@@ -68,7 +68,7 @@ window.addEventListener("load", (event) => {
     var now = new Date();
     var events = getEventsForPeriod(data, now, addMonths(now, 3))
     document.getElementById("events_html").innerHTML = makeEventsPageHtml(events, now);
-    scrollToChosenEvent()
+    window.setTimeout(scrollToChosenEvent, 1)  // prevent race condition with events_html injection
   });
 })
 
