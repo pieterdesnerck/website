@@ -78,6 +78,9 @@ both phone and app-based payment, location code 2604. A limit of 100 days per ye
 is carried out by the University every year. It surveys residents, workers, shoppers and families with kids at the local school about their use of different modes of transport. This helps to account for the growing and changing transport profile of the area.
 Read the [2023 summary report](/reports/2023 stakeholders travel survey update.pdf){:target="_blank"}
 
+[Through-Traffic](#traffic){:name=traffic}
+remains a concern for residents, with ongoing issues around speeding, crossings and road safety. With the [closure of Storey's Way](https://www.geograph.org.uk/photo/7610580) to through traffic, Eddington Avenue/Turing Way comprise the only connection between Huntingdon Road and Madingley Road arterial routes between Grange Road and the villages of Bar Hill or Madingley. Bollard control at the south end of Eddington Avenue protects the central block from much of this traffic, but has been frequently out of service due to repeated vehicle collisions. A replacement ANPR system is to be commissioned by the end of 2024.
+
 
 ## Water, waste, heating, internet, mobile etc.
 
@@ -153,3 +156,4 @@ is at at the south end of Eddington Avenue ([map](https://www.google.com/maps/@5
 
 
 *[HIU]: Heat Interface Unit
+*[ANPR]: Automatic Number Plate Recognition

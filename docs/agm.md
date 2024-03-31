@@ -19,7 +19,7 @@ An active and representative residents association can help the University deliv
 
 ## What you can do
 
-- **Come to the AGM** - it shouldn't take an hour
+- **Come to the AGM** - it shouldn't take an hour and you'll learn how to make things better.
 - **Bring a neighbour** - not everyone feels confident or welcome to local events. This one really is for everyone who lives here.
 - **Stand for a position** - there's a (brief!) election process at the AGM. If you'd like to hold a named position then we would be very happy to [hear from you](/contact-us) in advance.
 - **Ask questions** - in advance, in person or [in writing](/contact-us). As yet another [opaque, local organisation](/handbook#portal) in Eddington we are happy to be quizzed on what we do and why we do it.
