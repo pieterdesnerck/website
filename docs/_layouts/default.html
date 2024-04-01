@@ -254,7 +254,7 @@
       transform-origin: 50% 50%;
     }
 
-    main .date-ordinal {
+    .date-ordinal {
       position: relative;
       bottom: 0.5em;
       font-size: 0.7em;
@@ -341,6 +341,11 @@
       <a href="/events">events</a>
       <a href="/representation">representation</a>
       <a href="/handbook">handbook</a>
+      {% assign month = "now" | date:"%m" | plus:0 %}
+      {% assign day = "now" | date:"%d" | plus:0 %}
+      {% if month == 4 and day < 12 %}
+      <a href="/agm">{% include date_ordinal.md day=11 %} April - our AGM</a>
+      {% endif %}
       <a id="nav-hide"><label for="nav-toggle-input">hide menu</label></a>
     </nav>
     <a class="logo" href="/"><img src="/images/logo.svg" /></a>
