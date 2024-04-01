@@ -23,23 +23,23 @@ is a wrapper-company owned by the University which deals with issues relating to
 They are responsible for collecting the [Estate Service Charge](#estate-management-charge) and spending it on local maintenance, improvement and contingency planning. Though they subcontract the billing to [Vital](#vital) and the execution of estate management tasks to [Mears](#mears).
 Portal can sometimes be a useful first contact for services commissioned by other parties below, such as bin collections, playing fields, play parks and questions around covenants.
 
-[Lodge Property Services](https://eddington-cambridge.co.uk/key-worker-housing-frequently-asked-questions){:name='lodge'}
-is a wrapper-company owned by the University which manages tenancy in the University's so-called "Key Worker Housing". This includes all properties in Eddington which are owned by the University and let out exclusively to their employees through their [Accommodation Service](https://www.accommodation.cam.ac.uk/). They effectively fill the role of an in-house estate agent, but maintenance of the property, its contents and shared internal spaces falls to [Portal](#portal).
+[Lodge Property Services](#lodge){:name='lodge'}
+is a wrapper-company owned by the University which manages tenancy in the University's so-called "[Key Worker Housing](https://eddington-cambridge.co.uk/key-worker-housing-frequently-asked-questions)". This includes all properties in Eddington which are owned by the University and let out exclusively to their employees through their [Accommodation Service](https://www.accommodation.cam.ac.uk/). They effectively fill the role of an in-house estate agent, but maintenance of the property, its contents and shared internal spaces is done by [Portal](#portal).
 
-[Core Sustainable Heat Management](https://find-and-update.company-information.service.gov.uk/company/10586130){:name='core'}
-is a wrapper-company owned by the University responsible for heat network infrastructure in Eddington and the energy centre on Burkitt Lane. Their responsibility ends before the Heat Interface Unit within each property. Consumer billing and much of the network's maintenance is subcontracted to [Vital Energi](#vital).
+[Core Sustainable Heat Management](#core){:name='core'}
+is a [wrapper-company](https://find-and-update.company-information.service.gov.uk/company/10586130) owned by the University responsible for heat network infrastructure in Eddington and the energy centre on Burkitt Lane. Their responsibility ends before the Heat Interface Unit within each property. Consumer billing and much of the network's maintenance is subcontracted to [Vital Energi](#vital).
 
-[Vital Energi](https://www.vitalenergi.co.uk/){:name='vital'}
-provide customer billing services to Portal and Core, for Estate Service Charge and heat usage respectively. They also run our energy centre and maintain our local heat network infrastructure as the current contract holder under Core.
+[Vital Energi](#vital){:name='vital'}
+are an [energy management company](https://www.vitalenergi.co.uk/) that run our energy centre and maintain our local heat network infrastructure as the current contract holder under Core. They also provide customer billing services to Portal and Core, for Estate Service Charge and heat usage respectively.
 
 [Mears](https://www.mearsgroup.co.uk/){:name='mears'}
 are a national housing services operator. They provide estate management services around Eddington as the current contract holder under Portal. They also do property management for Lodge, and both of these work packages form part of a broader contract with the University outside of Eddington.
 
-[Hill Residential](https://www.hill.co.uk/){:name='hill'}
-are builders of private homes in the areas of Eddington marketed as "Knights' Park" and "Rubicon". They are responsible for snagging of their newbuild properties and the delivery of shared spaces around those buildings to Portal. The boundary between shared spaces under Portal's control and those still controlled by Hill is not well defined as it gradually moves from the latter to the former.
+[Hill Residential](#hill){:name='hill'}
+are builders of private homes in the areas of Eddington marketed as "[Knights' Park](https://www.hill.co.uk/all-developments/cambridgeshire/knights-park)" and "[Rubicon](https://www.knightspark-eddington.co.uk/phases/rubicon/)". They are responsible for snagging of their newbuild properties and the delivery of shared spaces around those buildings to Portal. The boundary between shared spaces under Portal's control and those still controlled by Hill is not well defined as it gradually moves from the latter to the former.
 
-[Girton College](https://www.girton.cam.ac.uk/accommodation/swirles-court){:name='girton-college'}
-manages Swirles Court (bounded by Turing Way, Pheasant Drive and the Ridgeway) as accommodation for mainly postgraduate students remote from the main college site at the north end of Ridgeway.
+[Girton College](#girton-college){:name='girton-college'}
+manages [Swirles Court](https://www.girton.cam.ac.uk/accommodation/swirles-court) (bounded by Turing Way, Pheasant Drive and the Ridgeway) as accommodation for mainly postgraduate students remote from the main college site at the north end of Ridgeway.
 
 [Councils](#councils){:name='councils'}
 are a uniquely complicated aspect of Eddington, sitting as we do across the city boundary and a parish boundary. Due to the private nature of the shared spaces and the non-adopted status of roads in Eddington they have fewer responsibilities here than elsewhere in the UK.
@@ -74,11 +74,11 @@ both phone and app-based payment, location code 2604. A limit of 100 days per ye
 
 </details>
 
-[A Local Travel Survey](/reports/2023 stakeholders travel survey update.pdf){:name=travel-survey}{:target="_blank"}
+[A Local Travel Survey](#travel-survey){:name='travel-survey'}
 is carried out by the University every year. It surveys residents, workers, shoppers and families with kids at the local school about their use of different modes of transport. This helps to account for the growing and changing transport profile of the area.
 Read the [2023 summary report](/reports/2023 stakeholders travel survey update.pdf){:target="_blank"}
 
-[Through-Traffic](#traffic){:name=traffic}
+[Through-Traffic](#traffic){:name='traffic'}
 remains a concern for residents, with ongoing issues around speeding, crossings and road safety. With the [closure of Storey's Way](https://www.geograph.org.uk/photo/7610580) to through traffic, Eddington Avenue/Turing Way comprise the only connection between Huntingdon Road and Madingley Road arterial routes between the [historic centre](https://www.google.com/maps/dir/52.2241566,0.0905129/52.2134716,0.0831837/@52.2174037,0.0873664,15z/data=!3m1!4b1!4m9!4m8!1m5!3m4!1m2!1d0.1114754!2d52.2115934!3s0x47d870b888942875:0xf18d62d3e0a0f585!1m0!3e0?entry=ttu){:target="_blank"} and [Madingley village](https://www.google.com/maps/dir/52.2241566,0.0905129/52.2134716,0.0831837/@52.2236613,0.0550861,13.89z/data=!4m9!4m8!1m5!3m4!1m2!1d0.0487948!2d52.2317013!3s0x47d877aa7ea3da5f:0xd04d88bf99fc17b1!1m0!3e0?entry=ttu){:target="_blank"}. Bollard control at the south end of Eddington Avenue protects the central block from much of this traffic, but has been frequently out of service due to repeated vehicle collisions. A replacement ANPR system is to be commissioned by the end of 2024.
 
 
@@ -89,7 +89,7 @@ is provided by [Cambridge Water](https://www.cambridge-water.co.uk/). Eddington 
 
 
 [Rubbish & Recycling](#waste){:name='waste'}
-is collected by South Cambs District council from our communal bins. Some green waste recycling is available [near central blocks](#green-bin-map). Bulky waste which does not fit into the communal bins should be taken to the [Milton Waste Recycling Centre](https://www.cambridgeshire.gov.uk/directory/listings/milton-recycling-centre){:target="_blank"} or a [collection arranged with the council](https://www.cambridge.gov.uk/arrange-a-bulky-waste-collection). Portal maintains a page of detailed information about waste management [here](https://portal.eddington-cambridge.co.uk/category/?cat_ID=1&subcat_ID=4&page_ID=65
+is collected by South Cambs District council from our communal bins. Some green waste recycling is available [near central blocks](#green-bin-map), but not site-wide. Bulky waste which does not fit into the communal bins should be taken to the [Milton Waste Recycling Centre](https://www.cambridgeshire.gov.uk/directory/listings/milton-recycling-centre){:target="_blank"} or a [collection arranged with the council](https://www.cambridge.gov.uk/arrange-a-bulky-waste-collection). Fly-tipping around the bins should be reported to [Portal](#portal), who maintain a page of detailed information about waste management [here](https://portal.eddington-cambridge.co.uk/category/?cat_ID=1&subcat_ID=4&page_ID=65
 ) (requires a resident login).
 
 <details markdown="1">

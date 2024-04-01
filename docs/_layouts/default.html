@@ -187,7 +187,7 @@
       box-shadow: 0 0 2vh rgba(0,0,0,0.5);
     }
 
-    main [name]:target {
+    main :target {
       scroll-margin-top: 3em;
     }
 
@@ -196,10 +196,11 @@
       margin: auto auto;
     }
 
-    main > details > p > a[name] {
+    main.handbook > p > a[name],
+    main.handbook > details > p > a[name] {
       font-size: 120%;
     }
-    main > details > p > :target {
+    main :target {
       background-color: #fec;
     }
 
@@ -349,7 +350,7 @@
       <a id="nav-hide"><label for="nav-toggle-input">hide menu</label></a>
     </nav>
     <a class="logo" href="/"><img src="/images/logo.svg" /></a>
-    <main class="{{ page.url }}">
+    <main class="{{ page.url | remove_first:"/" }}">
       <h1>{{ page.title }}</h1>
       {{ content }}
       <br>
