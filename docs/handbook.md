@@ -85,7 +85,19 @@ remains a concern for residents, with ongoing issues around speeding, crossings 
 ## Water, waste, heating, internet, mobile etc.
 
 [Water](#water){:name='water'}
-is provided by [Cambridge Water](https://www.cambridge-water.co.uk/). Eddington is built on a [perched water table](https://en.wikipedia.org/wiki/Water_table#Perched_water_tables){:target="_blank"} with the increased flooding risk being offset by swales and other surface water collection that drains to the [lake at Brook Leys](https://eddington-cambridge.co.uk/news-and-updates/brook-leys-parkland-opens) in the south. Recycling of grey water from this lake back to residences was planned but has not yet been switched on, apparently pending legislation changes to permit the operation of this type of scheme.
+is provided by [Cambridge Water](https://www.cambridge-water.co.uk/). Eddington is built on a [perched water table](https://en.wikipedia.org/wiki/Water_table#Perched_water_tables){:target="_blank"} with the increased flooding risk being offset by swales and other surface water collection that drains to the [lake at Brook Leys](https://eddington-cambridge.co.uk/news-and-updates/brook-leys-parkland-opens) in the south. The facility to recycle grey water from this lake back to residences was planned but is not yet active, apparently pending a legislation change.
+
+
+[Rubbish & Recycling](#waste){:name='waste'}
+is collected by South Cambs District council from our communal bins. Some green waste recycling is available [near central blocks](#green-bin-map). Bulky waste which does not fit into the communal bins should be taken to the [Milton Waste Recycling Centre](https://www.cambridgeshire.gov.uk/directory/listings/milton-recycling-centre){:target="_blank"} or a [collection arranged with the council](https://www.cambridge.gov.uk/arrange-a-bulky-waste-collection). Portal maintains a page of detailed information about waste management [here](https://portal.eddington-cambridge.co.uk/category/?cat_ID=1&subcat_ID=4&page_ID=65
+) (requires a resident login).
+
+<details markdown="1">
+<summary>See map of green bin locations</summary>
+
+![green bin locations](/images/maps/green-bins-2024.png){: #green-bin-map}
+
+</details>
 
 [A Heat Network](#heat-network){:name='heat-network'}
 provides hot water to most properties in Eddington for both space heating and water heating. The distributing network itself is a closed system of pipes connecting an HIU in each building to the Energy Centre on Burkitt Lane. It is managed by [Core](#core) with maintenance and billing provided by [Vital Energi](#vital).
