@@ -32,8 +32,11 @@ is a [wrapper-company](https://find-and-update.company-information.service.gov.u
 [Vital Energi](#vital){:name='vital'}
 are an [energy management company](https://www.vitalenergi.co.uk/) that run our energy centre and maintain our local heat network infrastructure as the current contract holder under Core. They also provide customer billing services to Portal and Core, for Estate Service Charge and heat usage respectively.
 
-[Mears](https://www.mearsgroup.co.uk/){:name='mears'}
-are a national housing services operator. They provide estate management services around Eddington as the current contract holder under Portal. They also do property management for Lodge, and both of these work packages form part of a broader contract with the University outside of Eddington.
+[Mears](#mears){:name='mears'}
+are a national [housing services operator](https://www.mearsgroup.co.uk/). They provide estate management services around Eddington as the current contract holder under Portal. They also do property management for Lodge, and both of these work packages form part of a broader contract with the University outside of Eddington.
+
+[Encore Estates](#encore){:name='encore'}
+provide [property management services](https://www.encoreestates.co.uk/) for several of the privately-owned apartment blocks. They maintain communal, non-public areas such as entrances, stairs, elevators and garages as well as any garden areas belonging to the building. Leaseholders pay a building management fee for these services in addition to the [estate service charge](#estate-service-charge).
 
 [Hill Residential](#hill){:name='hill'}
 are builders of private homes in the areas of Eddington marketed as "[Knights' Park](https://www.hill.co.uk/all-developments/cambridgeshire/knights-park)" and "[Rubicon](https://www.knightspark-eddington.co.uk/phases/rubicon/)". They are responsible for snagging of their newbuild properties and the delivery of shared spaces around those buildings to Portal. The boundary between shared spaces under Portal's control and those still controlled by Hill is not well defined as it gradually moves from the latter to the former.
@@ -151,7 +154,7 @@ is at at the south end of Eddington Avenue ([map](https://www.google.com/maps/@5
 
 ## Shared spaces and estate management
 
-[Estate Service Charge](https://portal.eddington-cambridge.co.uk/estate-service-charge/){:name='estate-management-charge'}
+[Estate Service Charge](https://portal.eddington-cambridge.co.uk/estate-service-charge/){:name='estate-service-charge'}
 
 ## Local shops, amenities and facilities
 
