@@ -3,6 +3,7 @@ title: Eddington Handbook
 permalink: handbook
 redirect_from:
   - /area-guide
+  - /faq
 ---
 
 <i>
@@ -126,6 +127,9 @@ is available [many providers](https://www.openreach.com/fibre-broadband/fttp-pro
 Residents on 12-month tenancies have reported difficulty finding ISPs offering contracts of less than 18 months. EU law requires [consumers be offered the option](https://web.archive.org/web/20110704193402/http://consumers.ofcom.org.uk/2011/05/uk-consumers-benefit-from-european-telecoms-law-changes/) of contract lasting no longer than 12 months, although some providers make these hard to find. Renewal of internet contracts is governed by [Ofcom's General Conditions](https://www.ofcom.org.uk/__data/assets/pdf_file/0016/112282/guidance-under-general-conditions-c1-contract-requirements.pdf#page=5) which means ISPs have to get the customer's consent before renewing a fixed commitment period.
 
 </details>
+
+[Mobile Phone](#mobile){:name='mobile'}
+signal in Eddington is strong in central areas but is more limited in the north and in the shadow of larger buildings. The insulating materials used in most buildings here block mobile networks - as a result many residents have to enable [WiFi Calling](https://en.wikipedia.org/wiki/Wi-Fi_calling) on their handset or change provider to [one which supports it](https://www.4g.co.uk/news/ee-o2-three-and-vodafone-which-networks-offer-wi-fi-calling/) in order to make and receive calls indoors.
 
 ## School, nursery and families
 
