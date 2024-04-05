@@ -45,6 +45,8 @@ are builders of private homes in the areas of Eddington marketed as "[Knights' P
 [Girton College](#girton-college){:name='girton-college'}
 manages [Swirles Court](https://www.girton.cam.ac.uk/accommodation/swirles-court) (bounded by Turing Way, Pheasant Drive and the Ridgeway) as accommodation for mainly postgraduate students remote from the main college site at the north end of Ridgeway.
 
+[The University of Cambridge](#university){:name='university'}
+
 [Councils](#councils){:name='councils'}
 are a uniquely complicated aspect of Eddington, sitting as we do across the city boundary and a parish boundary. Due to the private nature of the shared spaces and the non-adopted status of roads in Eddington they have fewer responsibilities here than elsewhere in the UK.
 
@@ -154,11 +156,23 @@ is at at the south end of Eddington Avenue ([map](https://www.google.com/maps/@5
 
 [Sports Fields and Cricket Pitch](){:name='sports'}
 
-[Childrens' Playgrounds](){:name='playgrounds'}
+[Children's Playgrounds](){:name='playgrounds'}
 
 ## Shared spaces and estate management
 
 [Estate Service Charge](https://portal.eddington-cambridge.co.uk/estate-service-charge/){:name='estate-service-charge'}
+
+[Safety and Security](#safety){:name='safety'}
+remains a key concern for our residents. While Cambridge is a relatively low-crime city, bike thefts and antisocial behaviour are common. In Eddington it is likely because this is a quiet area with lots of public space and a late-opening, licensed supermarket. Residents are urged to [report all incidents](https://www.cambs.police.uk/report) and suspicious behaviour to the police - and by calling 999 if urgent e.g. a crime in progress. As a new borough of the city, sustained reporting of undesirable activity is needed to guide the allocation of police resources.
+
+<details markdown="1">
+<summary>See how Portal, Encore and the University fit into local safety planning</summary>
+
+[Portal](#portal) is responsible for the physical security of some areas of site, including commercial units, University buildings and communal bike sheds. [Encore](#encore) is similarly in charge of shared spaces in leasehold properties like garages and stairwells. However, residents are encouraged to consider these areas public when making security decisions as it is difficult to prevent criminals from gaining access to such shared spaces.
+
+The University has its own [security service](https://www.security.admin.cam.ac.uk/) as well as CCTV monitoring in the central area of Eddington, which they plan to extend to cover entrance/exit routes. They have a published [security policy](https://eddington-cambridge.co.uk/wp-content/uploads/Security-Policy-Final.pdf) and [antisocial behaviour policy](https://eddington-cambridge.co.uk/wp-content/uploads/Anti-Social-Behaviour-Policy-Final.pdf) for the area.
+
+</details>
 
 ## Local shops, amenities and facilities
 
