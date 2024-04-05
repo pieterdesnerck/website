@@ -33,8 +33,14 @@ is a [wrapper-company](https://find-and-update.company-information.service.gov.u
 [Vital Energi](#vital){:name='vital'}
 are an [energy management company](https://www.vitalenergi.co.uk/) that run our energy centre and maintain our local heat network infrastructure as the current contract holder under Core. They also provide customer billing services to Portal and Core, for Estate Service Charge and heat usage respectively.
 
-[Mears](#mears){:name='mears'}
+[Mears Group](#mears){:name='mears'}
 are a national [housing services operator](https://www.mearsgroup.co.uk/). They provide estate management services around Eddington as the current contract holder under Portal. They also do property management for Lodge, and both of these work packages form part of a broader contract with the University outside of Eddington.
+
+[Nurture Landscapes](#nurture){:name='nurture'}
+are a [grounds maintenance company](https://www.nurture-group.co.uk/) subcontracted by [Mears](#mears) to look after communal planting and hard landscaping.
+
+[Elite Parking Management](#elite){:name='elite'}
+are a [parking management company](https://eliteparkingmanagement.com/) subcontracted by [Mears](#mears) to handle parking enforcement and fines.
 
 [Encore Estates](#encore){:name='encore'}
 provide [property management services](https://www.encoreestates.co.uk/) for several of the privately-owned apartment blocks. They maintain communal, non-public areas such as entrances, stairs, elevators and garages as well as any garden areas belonging to the building. Leaseholders pay a building management fee for these services in addition to the [estate service charge](#estate-service-charge).
@@ -46,6 +52,7 @@ are builders of private homes in the areas of Eddington marketed as "[Knights' P
 manages [Swirles Court](https://www.girton.cam.ac.uk/accommodation/swirles-court) (bounded by Turing Way, Pheasant Drive and the Ridgeway) as accommodation for mainly postgraduate students remote from the main college site at the north end of Ridgeway.
 
 [The University of Cambridge](#university){:name='university'}
+created Eddington to support their growth plan and migration from the city centre. Their [Estates division](https://www.em.admin.cam.ac.uk/) is responsible for continued planning and delivery of the development.
 
 [Councils](#councils){:name='councils'}
 are a uniquely complicated aspect of Eddington, sitting as we do across the city boundary and a parish boundary. Due to the private nature of the shared spaces and the non-adopted status of roads in Eddington they have fewer responsibilities here than elsewhere in the UK.
