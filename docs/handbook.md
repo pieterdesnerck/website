@@ -143,6 +143,7 @@ signal in Eddington is strong in central areas but is more limited in the north 
 ## School, nursery and families
 
 [University of Cambridge Primary School](https://www.universityprimaryschool.org.uk/){:name='primary-school'}
+is a [new state school](https://www.universityprimaryschool.org.uk/) built to support the population growth in North West Cambridge. In 2024 it will have a school role of 656 children across a single pre-school class (for children turning 4 during that academic year) and three primary classes for reception through Year 6 (ages ~5 to ~11).
 
 [Bright Horizons Day Nursery](https://www.brighthorizons.co.uk/our-nurseries/eddington-nursery){:name='nursery'}
 
