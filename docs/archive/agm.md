@@ -1,6 +1,17 @@
 ---
 title: Our Annual General Meeting 2024
-permalink: agm
+permalink: archive/agm2024
+redirect_from:
+  - /agm2024
+  - /agm
+---
+
+---
+
+*This page is now archived
+<a href="/agm/summary" class="btn btn-primary btn-lg m-3">see the AGM summary</a>
+to find out what happened.*
+{: style="text-align: center;"}
 ---
 
 Thursday {% include date_ordinal.md day=11 %} April 2024
