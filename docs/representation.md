@@ -1,6 +1,8 @@
 ---
 title: Community Representation
 permalink: representation
+redirect_from:
+  - /about/representation
 ---
 
 The ERA is a member of the [Federation of Cambridge Residents’ Associations](https://www.fecra.org.uk/)

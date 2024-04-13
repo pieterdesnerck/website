@@ -1,6 +1,8 @@
 ---
 title: Events in Eddington
 permalink: events
+redirect_from:
+  - /events/calendar
 ---
 
 The ERA promotes and supports non-commercial local events to help build a connected community.
