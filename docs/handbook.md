@@ -106,9 +106,13 @@ is collected by South Cambs District council from our communal bins. Some green 
 ) (requires a resident login).
 
 <details markdown="1">
-<summary>See map of green bin locations</summary>
+<summary>See map of green bin locations and details of free charity collection for household items</summary>
 
-![green bin locations](/images/maps/green-bins-2024.png){: #green-bin-map}
+[Anglo Doorstep Collections](#anglo-doorstep-collections){:name='anglo-doorstep-collections'}
+operate a free collection service for charity donations. Clothing and household items in good condition can be donated by [booking a collection](https://anglodoorstepcollections.co.uk/make-a-booking/?advert_id=cambridge_who#make_booking).
+
+[Green bin locations](#green-bin-map){:#green-bin-map} are marked below with an "X".
+![green bin locations](/images/maps/green-bins-2024.png)
 
 </details>
 
