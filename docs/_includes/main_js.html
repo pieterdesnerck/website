@@ -198,7 +198,9 @@ function parseDate(d){
 
 function short_time(d, d2){
   var r = d.getHours() % 12;
-  if(d.getMinutes() != 0){
+  if(r == 0){
+    return d.getHours() == 0 ? "midnight" : "noon"
+  }else if(d.getMinutes() != 0){
     r += "." + d.toLocaleString('default', {minute: "2-digit"})
   }
   am_pm = get_am_pm(d)

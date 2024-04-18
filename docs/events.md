@@ -132,7 +132,8 @@ function makeEventsPageHtml(events, start_date){
       (x)=>`<a href="${x[URL]}">${x[NAME]}</a>\n`
           +` ${sep} ${time_range(x)}\n`
           +` ${sep} ${x[LOCATION]}\n\n`
-          +` ${sep} ${price(x)}\n<br/>\n`
+          +` ${sep} ${price(x)}\n`
+          +` &nbsp; &nbsp; ${add_to_calendar_button(x)}\n<br/>\n`
           +` ${x[DESCRIPTION].trim()}`
           + (x[URL] ? `  <a href="${x[URL]}">${info_link(x)}</a>`:"")
           +`<br><br>\n\n`
@@ -151,4 +152,22 @@ function makeEventsPageHtml(events, start_date){
 
   return html
 }
+
+function add_to_calendar_button(x){
+  return `<add-to-calendar-button
+  name="${x[NAME]}"
+  description="${x[DESCRIPTION]}\n\n${x[URL]}"
+  startDate="${x[DATE].toISOString().split('T')[0]}"
+  startTime="${x[START_TIME].toLocaleTimeString()}"
+  endTime="${x[END_TIME].toLocaleTimeString()}"
+  timeZone="Europe/London"
+  location="${x[LOCATION]}"
+  options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+  hideTextLabelButton
+  hideBackground
+  size="2"
+  style="float: right; margin-bottom: -10px;"
+></add-to-calendar-button>`
+}
 </script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer integrity="sha384-SLWV0zyzoFXhjfMa11iIAMZvOTVDFFKn0Cj9R0eBSFnuS+a+H6GuZ3O1G9BY1ZjO" crossorigin="anonymous"></script>
