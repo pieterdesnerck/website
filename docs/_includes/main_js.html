@@ -61,6 +61,7 @@ function getEventsForMonth(sheet_data, month_skip){
 
 function getEventsForPeriod(sheet_data, start_date, end_date){
   console.log(`looking for events between ${start_date} and ${end_date}`);
+  start_date = start_date.setHours(0,0,0,0)
   var all_events = sheet_data.slice(1)
   for(i in all_events){
     for(field of [DATE_SUBMITTED, DATE_APPROVED, DATE]){
