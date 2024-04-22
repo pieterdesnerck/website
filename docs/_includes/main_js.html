@@ -71,8 +71,8 @@ function getEventsForPeriod(sheet_data, start_date, end_date){
       all_events[i][field] = new Date(2000, 1, 1, ...all_events[i][field].split(":"))
     }
   }
-  console.log(all_events)
   var filtered_events = all_events.filter((x)=>x[DATE_APPROVED] && x[DATE_APPROVED] > x[DATE_SUBMITTED] && x[DATE] >= start_date && x[DATE] < end_date);
+  console.log(filtered_events)
 
   console.log(`${filtered_events.length} events found for period`);
   return filtered_events

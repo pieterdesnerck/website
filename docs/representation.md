@@ -48,10 +48,13 @@ Previous meetings (minutes are not yet made public):<br/>
   {%- assign file_path_filter = "file.path contains '" | append: date_str | append:"'" -%}
   {%- assign file = minutes | where_exp:"file", file_path_filter | first -%}
   {%- assign day = date|date:"%-d" -%}
-  {%- if file %} <a href="{{ file.path|replace_first: "_", "" }}">{%- include date_ordinal.md day=day %}{{- date|date: " %B %Y" -}}</a>,&nbsp;
+  {%- if file %} <a href="{{ file.path|replace_first: "_", "" }}">{%- include date_ordinal.md day=day -%}{{- date|date: " %B %Y" -}}</a>
   {%- else -%}
-  {%- include date_ordinal.md day=day %}{{- date|date: " %B %Y" -}},
-  {% endif -%}
+  {%- include date_ordinal.md day=day %}{{- date|date: " %B %Y" -}}
+  {%- endif -%}
+  {%- if forloop.last == false -%}
+  ,&ensp;
+  {%- endif -%}
 {%- endfor %}
 
 {% endfor %}
