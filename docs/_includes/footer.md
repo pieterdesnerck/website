@@ -22,10 +22,10 @@ You are identified as a [developer](?developer_mode=1) so can see things like th
 
 [Contact Us](/contact-us)<br>
 [Constitution](/documents/constitution.pdf)<br>
-[Health and Safety Policy](/documents/health-and-safety-policy.pdf)<br>
-[Safeguarding Policy](/documents/safeguarding-policy.pdf)<br>
-[Privacy Policy](/documents/privacy-policy.pdf)<br>
-[Equal Opportunities Policy](/documents/equal-opportunities-policy.pdf)<br>
-[Environmental Policy](/documents/environmental-policy.pdf)<br>
+[Health and Safety Policy](/documents/health-and-safety-policy.pdf){:name='policies'}<br>
+[Safeguarding Policy](/documents/safeguarding-policy.pdf){:name='policies'}<br>
+[Privacy Policy](/documents/privacy-policy.pdf){:name='policies'}<br>
+[Equal Opportunities Policy](/documents/equal-opportunities-policy.pdf){:name='policies'}<br>
+[Environmental Policy](/documents/environmental-policy.pdf){:name='policies'}<br>
 
 </div>

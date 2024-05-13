@@ -170,4 +170,4 @@ function add_to_calendar_button(x){
 ></add-to-calendar-button>`
 }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer integrity="sha384-SLWV0zyzoFXhjfMa11iIAMZvOTVDFFKn0Cj9R0eBSFnuS+a+H6GuZ3O1G9BY1ZjO" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.6.14" integrity="sha384-APA3+zG8NRE4ML4hiWv+3NFvcbooelKsBJHModWOORVG8BwjqysAzxB6/gdpqRhF" crossorigin="anonymous"></script>
