@@ -25,5 +25,7 @@ You are identified as a [developer](?developer_mode=1) so can see things like th
 [Health and Safety Policy](/documents/health-and-safety-policy.pdf)<br>
 [Safeguarding Policy](/documents/safeguarding-policy.pdf)<br>
 [Privacy Policy](/documents/privacy-policy.pdf)<br>
+[Equal Opportunities Policy](/documents/equal-opportunities-policy.pdf)<br>
+[Environmental Policy](/documents/environmental-policy.pdf)<br>
 
 </div>
