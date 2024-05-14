@@ -6,6 +6,7 @@ frequency: quarterly
 is_public_minutes: true
 website: https://www.cambridge.gov.uk/north-west-and-west-cambridge-community-forum
 next_date:
+  - 2024-06-13
 prev_dates:
   - 2024-02-13
   - 2023-11-02
