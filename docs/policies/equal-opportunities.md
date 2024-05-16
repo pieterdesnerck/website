@@ -71,7 +71,7 @@ and take appropriate action, which may include:
 ## Training and Awareness
 
 We will provide regular training and awareness-raising activities to all individuals involved in the
-Eddington Residents’ Association on equality and diversity issues.
+Eddington Residents Association on equality and diversity issues.
 
 ## Monitoring and Review
 
@@ -81,7 +81,7 @@ necessary to ensure its effectiveness.
 ## Conclusion
 
 This Equal Opportunities Policy is a commitment to creating a fair and inclusive environment for all
-within the Eddington Residents’ Association. We are confident that by working together we can
+within the Eddington Residents Association. We are confident that by working together we can
 build a more just and equitable community for everyone.
 
 {{ page.date }}
