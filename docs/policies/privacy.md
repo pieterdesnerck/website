@@ -47,7 +47,7 @@ We will securely retain the information we hold about you for the duration of ER
 ## Our contact details
 
 For privacy matters, and to get in touch with Eddington Resident’s Association:
-- Data Controller: Eddington Resident’s Association
+- Data Controller: Eddington Residents Association
 - Email: info@eddingtonra.org
 
 ## Appendix
