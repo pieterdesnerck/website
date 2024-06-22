@@ -6,7 +6,7 @@ date: 2024-05-15
 The Eddington Residents Association (ERA) understands its duty of care to ensure the safety of those
 who volunteer or use our services. The ERA is a small association that is run by volunteers. It has been established for the public benefit of people living in Eddington within Cambridge City.
 
-Our policy is to ensure, so far as is reasonably practicable, that our activities are carried out safely and do not pose a risk to the health of our volunteers and others who may use our services and/or attend our events. ERA accepts its overall responsibilities. The Health and Safety Officer has responsibility for this policy and its implementation.
+Our policy is to ensure, so far as is reasonably practicable, that our activities are carried out safely and do not pose a risk to the health of our volunteers and others who may use our services and/or attend our events. ERA accepts its overall responsibilities. The Committee has responsibility for this policy and its implementation.
 
 Health and safety matters will be kept under regular review; the policy will be amended if we believe that it is no longer valid. This policy should be read alongside the guidelines provided to volunteers and which they agree to implement.
 
